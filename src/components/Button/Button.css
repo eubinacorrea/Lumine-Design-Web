@@ -2,28 +2,26 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   padding: 14px 28px;
-
   border: none;
   border-radius: 999px;
-
   background-color: var(--color-brand);
   color: var(--color-text);
-
   font-size: 1rem;
   font-weight: 700;
-
   cursor: pointer;
-
+  
   transition:
     background-color 0.3s ease,
     transform 0.3s ease,
     box-shadow 0.3s ease;
+    min-height: 54px;
+  padding-inline: 30px;
 }
 
 .button:hover {
   background-color: var(--color-brand-hover);
   transform: translateY(-2px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+  box-shadow: -1px -3px 8px #dfdbb8;
+  text-shadow: -1px -3px 8px #dfdbb8a3;
 }
