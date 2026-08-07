@@ -1,8 +1,9 @@
 import "./Navbar.css";
 import Container from "../Container";
 import Logo from "../Logo/logo";
+import Button from "../Button/Button";
 
-function Navbar({ Button }) {
+function Navbar() {
   return (
     <nav className="navbar">
       <Container>
