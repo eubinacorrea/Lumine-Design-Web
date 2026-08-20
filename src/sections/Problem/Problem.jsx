@@ -3,20 +3,16 @@ import "./Problem.css";
 
 import Container from "../../components/Container";
 
-function Problem() {
+function Problem({ text, title, problemText }) {
   return (
     <section className="problem" id="como-ajudamos">
       <Container>
         <div className="problem__content">
-          <p className="problem__eyebrow">O problema</p>
+          <p className="problem__eyebrow">{text}</p>
 
-          <h2 className="problem__title">
-            Muitos negócios são excelentes, mas ninguém os encontra.
-          </h2>
+          <h2 className="problem__title">{title}</h2> 
 
-          <p className="problem__text">
-           Uma marca pouco clara, uma presença digital fraca ou a ausência nas buscas podem fazer uma boa empresa parecer menos preparada do que realmente é..
-          </p>
+          <p className="problem__text">{problemText}</p>
         </div>
       </Container>
     </section>
