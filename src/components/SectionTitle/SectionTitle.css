@@ -1,0 +1,46 @@
+.section-title {
+  display: grid;
+  grid-template-columns: 0.35fr 1fr;
+  gap: 32px 64px;
+}
+
+.section-title__eyebrow {
+  margin: 0;
+
+  color: var(--color-brand);
+  font-size: 0.85rem;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.section-title__heading {
+  max-width: 900px;
+  margin: 0;
+
+  font-size: clamp(2.5rem, 4.5vw, 5rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.section-title__description {
+  grid-column: 2;
+
+  max-width: 650px;
+  margin: 0;
+
+  color: #555;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .section-title {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .section-title__description {
+    grid-column: auto;
+  }
+}

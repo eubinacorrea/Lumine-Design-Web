@@ -1,7 +1,7 @@
 .problem {
   padding-block: 120px;
-  background: #f3f0eb;
-  color: #050505;
+  background: var(--color-background, #050505);
+  color: var(--color-text, #050505);
 }
 
 .problem__content {

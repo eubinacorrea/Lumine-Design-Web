@@ -5,6 +5,29 @@ import lumineLogo from "./assets/images/conceito2.png";
 import ServiceCard from "./sections/Services/ServiceCard";
 import Services from "./sections/Services/Services";
 
+const services = [
+  {
+    id: 1,
+    title: "Presença Digital",
+    description:
+      "Soluções para melhorar a forma como sua empresa aparece e é percebida no ambiente digital.",
+  },
+
+  {
+    id: 2,
+    title: "Marca & Posicionamento",
+    description:
+      "Estratégia e identidade para comunicar valor com mais clareza, consistência e profissionalismo.",
+  },
+
+  {
+    id: 3,
+    title: "Experiências Web",
+    description:
+      "Sites e soluções digitais pensados para conectar sua empresa aos clientes de forma simples e eficiente.",
+  },
+];
+
 function App() {
   return (
     <>
@@ -24,25 +47,18 @@ function App() {
           problemText="Uma marca pouco clara, uma presença digital fraca ou a ausência nas buscas podem fazer uma boa empresa parecer menos preparada do que realmente é."
         />
         <Services
-  eyebrow="Como podemos ajudar"
-  title="Estratégia, design e tecnologia trabalhando juntos."
-  description="Criamos soluções para fortalecer marcas, melhorar a presença digital e aproximar empresas de seus clientes."
->
-  <ServiceCard
-    title="Presença Digital"
-    description="Soluções para melhorar a forma como sua empresa aparece e é percebida no ambiente digital."
-  />
-
-  <ServiceCard
-    title="Marca & Posicionamento"
-    description="Estratégia e identidade para comunicar valor com mais clareza, consistência e profissionalismo."
-  />
-
-  <ServiceCard
-    title="Experiências Web"
-    description="Sites e soluções digitais pensados para conectar sua empresa aos clientes de forma simples e eficiente."
-  />
-</Services>
+          eyebrow="Como podemos ajudar"
+          title="Estratégia, design e tecnologia trabalhando juntos."
+          description="Criamos soluções para fortalecer marcas, melhorar a presença digital e aproximar empresas de seus clientes."
+        >
+          {services.map((service) => (
+            <ServiceCard
+              key={service.id}
+              title={service.title}
+              description={service.description}
+            />
+          ))}
+        </Services>
       </main>
     </>
   );

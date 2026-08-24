@@ -1,7 +1,7 @@
 .hero {
   min-height: 760px;
   padding-block: 150px 90px;
-  background: #777;
+  background: var(--color-background, #050505);
 }
 
 .hero__content {

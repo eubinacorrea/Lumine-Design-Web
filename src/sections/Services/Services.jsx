@@ -1,6 +1,7 @@
 import "./Services.css";
 
 import Container from "../../components/Container/Container";
+import SectionTitle from "../../components/SectionTitle";
 
 function Services({
   eyebrow,
@@ -11,25 +12,15 @@ function Services({
   return (
     <section className="services" id="servicos">
       <Container>
-
-        <div className="services__header">
-          <p className="services__eyebrow">
-            {eyebrow}
-          </p>
-
-          <h2 className="services__title">
-            {title}
-          </h2>
-
-          <p className="services__description">
-            {description}
-          </p>
-        </div>
+        <SectionTitle
+          eyebrow={eyebrow}
+          title={title}
+          description={description}
+        />
 
         <div className="services__grid">
           {children}
         </div>
-
       </Container>
     </section>
   );
