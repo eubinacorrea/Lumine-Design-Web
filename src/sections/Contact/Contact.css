@@ -1,0 +1,66 @@
+.contact {
+  padding: 140px 0;
+
+  background: var(--color-brand);
+  color: #fff;
+}
+
+.contact__content {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+
+  gap: 64px;
+
+  align-items: end;
+}
+
+.contact__eyebrow {
+  margin: 0 0 24px;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.contact__title {
+  max-width: 850px;
+  margin: 0 0 28px;
+
+  font-size: clamp(3rem, 5vw, 6rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.contact__description {
+  max-width: 620px;
+  margin: 0;
+
+  line-height: 1.6;
+}
+
+.contact__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 24px;
+}
+
+.contact__instagram {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+@media (max-width: 760px) {
+  .contact {
+    padding: 90px 0;
+  }
+
+  .contact__content {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}

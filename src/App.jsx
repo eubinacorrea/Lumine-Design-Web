@@ -6,6 +6,13 @@ import ServiceCard from "./sections/Services/ServiceCard";
 import Services from "./sections/Services/Services";
 import Process from "./sections/Process/Process";
 import ProcessStep from "./sections/Process/ProcessStep";
+import About from "./sections/About/About";
+import Team from "./sections/Team/Team";
+import TeamMember from "./sections/Team/TeamMember";
+import FAQ from "./sections/FAQ/FAQ";
+import FAQItem from "./sections/FAQ/FAQItem";
+import Contact from "./sections/Contact/Contact";
+import Footer from "./sections/Footer/Footer";
 
 const services = [
   {
@@ -59,6 +66,32 @@ const processSteps = [
       "Acompanhamos o projeto e identificamos oportunidades para os próximos passos.",
   },
 ];
+const faqItems = [
+  {
+    id: 1,
+    question: "Vocês atendem clientes em todo o Brasil?",
+    answer:
+      "Sim. Nosso atendimento é remoto e podemos desenvolver projetos para empresas de diferentes regiões do país.",
+  },
+  {
+    id: 2,
+    question: "Posso contratar apenas um serviço?",
+    answer:
+      "Sim. Cada projeto é avaliado de acordo com a necessidade e o momento do negócio.",
+  },
+  {
+    id: 3,
+    question: "Como funciona o orçamento?",
+    answer:
+      "Primeiro entendemos o que sua empresa precisa. Depois definimos escopo, prioridades e apresentamos uma proposta adequada ao projeto.",
+  },
+  {
+    id: 4,
+    question: "Os projetos são personalizados?",
+    answer:
+      "Sim. A proposta da Lúmine é desenvolver soluções adequadas à realidade, aos objetivos e à identidade de cada cliente.",
+  },
+];
 
 function App() {
   return (
@@ -106,6 +139,54 @@ function App() {
             />
           ))}
         </Process>
+        <About
+  eyebrow="Sobre a Lúmine"
+  title="Estratégia e execução no mesmo lugar."
+  description="A Lúmine nasceu da união entre design e desenvolvimento para ajudar empresas a construir uma presença mais clara, profissional e preparada para crescer."
+  text="Unimos visão de marca, comunicação e tecnologia para desenvolver soluções pensadas de acordo com a realidade de cada negócio."
+  highlight="Do autônomo ao empresário, acreditamos que todo bom negócio merece a oportunidade de ser encontrado, reconhecido e escolhido."
+/>
+
+<Team
+  eyebrow="Quem faz acontecer"
+  title="Duas especialidades. Uma mesma direção."
+  description="Design e tecnologia trabalhando juntos desde o início de cada projeto."
+>
+  <TeamMember
+    name="Raoni Roehe"
+    role="Design & Branding"
+    description="Responsável pela direção visual, identidade e construção das soluções de marca da Lúmine."
+  />
+
+  <TeamMember
+    name="Sabrina"
+    role="Desenvolvimento Web"
+    description="Responsável por transformar estratégia e design em experiências digitais funcionais, responsivas e orientadas ao negócio."
+  />
+</Team>
+<FAQ
+  eyebrow="Perguntas frequentes"
+  title="Algumas respostas antes de começarmos."
+  description="Se ainda restar alguma dúvida, fale diretamente com a gente."
+>
+  {faqItems.map((item) => (
+    <FAQItem
+      key={item.id}
+      question={item.question}
+      answer={item.answer}
+    />
+  ))}
+</FAQ>
+<Contact
+  title="Seu negócio pode ser o nosso próximo projeto."
+  description="Conte para a gente onde sua empresa está hoje e onde você quer chegar."
+  whatsapp="https://wa.me/5547997417709"
+  instagram="https://instagram.com/luminedesigncode"
+/>
+<Footer
+  instagram="https://instagram.com/luminedesigncode"
+  whatsapp="https://wa.me/5547997417709"
+/>
       </main>
     </>
   );

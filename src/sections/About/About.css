@@ -1,0 +1,49 @@
+.about {
+  padding: 120px 0;
+  background: #050505;
+  color: #fff;
+}
+
+.about__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+
+  margin-top: 72px;
+}
+
+.about__text,
+.about__highlight {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.about__text {
+  max-width: 620px;
+  color: #c7c7c7;
+}
+
+.about__highlight {
+  max-width: 680px;
+
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+@media (max-width: 760px) {
+  .about {
+    padding: 80px 0;
+  }
+
+  .about__content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+
+    margin-top: 48px;
+  }
+
+  .about__highlight {
+    font-size: 1.5rem;
+  }
+}
