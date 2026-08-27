@@ -16,13 +16,12 @@
   z-index: 1000;
 
   transition:
-    background-color 0.3s ease,
-    padding 0.3s ease;
+    padding 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .navbar--scrolled {
   padding-block: 18px;
-
   background: rgba(5, 5, 5, 0.92);
 }
 
@@ -34,50 +33,110 @@
 
 .navbar__links a {
   color: #fff;
-  text-decoration: none;
 
   font-size: 0.95rem;
   font-weight: 600;
 
-  transition:
-    color 0.25s ease,
-    opacity 0.25s ease;
+  text-decoration: none;
+
+  transition: color 0.25s ease;
+}
+
+.navbar__links a:hover {
+  color: var(--color-brand);
 }
 
 .navbar__menu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: none;
 
   width: 52px;
   height: 52px;
+
+  align-items: center;
+  justify-content: center;
 
   color: #fff;
   background: var(--color-brand);
 
   border: 0;
-  border-radius: 999px;
+  border-radius: 50%;
 
   font-size: 1.1rem;
+
   cursor: pointer;
 }
 
-.navbar__links a:hover {
-  color: var(--color-brand);
-
+/* Depois do scroll */
+.navbar--scrolled .navbar__links {
+  display: none;
 }
+
+.navbar--scrolled .navbar__menu {
+  display: flex;
+}
+
+
+/* MENU ABERTO */
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #050505;
+
+  z-index: 2000;
+}
+
+.menu-overlay__close {
+  position: absolute;
+  top: 32px;
+  right: 48px;
+
+  color: #fff;
+  background: none;
+
+  border: 0;
+
+  font-size: 3rem;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.menu-overlay__links {
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+
+  text-align: center;
+}
+
+.menu-overlay__links a {
+  color: #fff;
+
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 700;
+
+  line-height: 1;
+
+  text-decoration: none;
+
+  transition: color 0.25s ease;
+}
+
+.menu-overlay__links a:hover {
+  color: var(--color-brand);
+}
+
+
+/* MOBILE */
 
 @media (max-width: 760px) {
-  .navbar {
-    padding: 24px;
-  }
-
-  .navbar__links {
-    display: none;
-  }
-}
-
-@media (max-width: 600px) {
   .navbar {
     padding: 20px 24px;
   }
@@ -88,5 +147,14 @@
 
   .navbar__links {
     display: none;
+  }
+
+  .navbar__menu {
+    display: flex;
+  }
+
+  .menu-overlay__close {
+    top: 24px;
+    right: 24px;
   }
 }

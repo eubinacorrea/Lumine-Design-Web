@@ -4,6 +4,8 @@ import Problem from "./sections/Problem/Problem";
 import lumineLogo from "./assets/images/conceito.svg";
 import ServiceCard from "./sections/Services/ServiceCard";
 import Services from "./sections/Services/Services";
+import Process from "./sections/Process/Process";
+import ProcessStep from "./sections/Process/ProcessStep";
 
 const services = [
   {
@@ -25,6 +27,36 @@ const services = [
     title: "Experiências Web",
     description:
       "Sites e soluções digitais pensados para conectar sua empresa aos clientes de forma simples e eficiente.",
+  },
+];
+const processSteps = [
+  {
+    id: 1,
+    number: "01",
+    title: "Entendemos",
+    description:
+      "Conhecemos seu negócio, seu momento e os objetivos que você deseja alcançar.",
+  },
+  {
+    id: 2,
+    number: "02",
+    title: "Planejamos",
+    description:
+      "Definimos prioridades, estratégia e o caminho mais adequado para o projeto.",
+  },
+  {
+    id: 3,
+    number: "03",
+    title: "Criamos",
+    description:
+      "Transformamos estratégia em design, presença digital e tecnologia.",
+  },
+  {
+    id: 4,
+    number: "04",
+    title: "Evoluímos",
+    description:
+      "Acompanhamos o projeto e identificamos oportunidades para os próximos passos.",
   },
 ];
 
@@ -59,6 +91,21 @@ function App() {
             />
           ))}
         </Services>
+
+        <Process
+          eyebrow="Nosso processo"
+          title="Um caminho claro do primeiro contato ao resultado."
+          description="Cada projeto é diferente, mas nossa forma de trabalhar mantém estratégia, proximidade e clareza em todas as etapas."
+        >
+          {processSteps.map((step) => (
+            <ProcessStep
+              key={step.id}
+              number={step.number}
+              title={step.title}
+              description={step.description}
+            />
+          ))}
+        </Process>
       </main>
     </>
   );
