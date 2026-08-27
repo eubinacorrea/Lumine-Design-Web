@@ -1,7 +1,7 @@
 import Hero from "./sections/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
 import Problem from "./sections/Problem/Problem";
-import lumineLogo from "./assets/images/conceito2.png";
+import lumineLogo from "./assets/images/conceito.svg";
 import ServiceCard from "./sections/Services/ServiceCard";
 import Services from "./sections/Services/Services";
 

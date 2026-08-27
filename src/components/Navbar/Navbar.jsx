@@ -1,23 +1,45 @@
+import { useEffect, useState } from "react";
 import "./Navbar.css";
-import Container from "../Container";
-import Logo from "../Logo/logo";
-import Button from "../Button/Button";
+import Logo from "../Logo/Logo";
 
 function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  useEffect(() => {
+  function handleScroll() {
+    if (window.scrollY > 80) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  }
+
+  window.addEventListener("scroll", handleScroll);
+
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, []);
+
   return (
     <nav className="navbar">
-      <Container>
-        <div className="navbar__inner">
-          <Logo variant="light" width={150} />
-          <Button
-            className="navbar__menu"
-            type="button"
-            aria-label="Abrir menu"
-            > ☰
-              </Button>
-            
-        </div>
-      </Container>
+      <Logo variant="light" width={170} />
+
+      {!isScrolled ? (
+  <div className="navbar__links">
+    <a href="#servicos">Serviços</a>
+    <a href="#processo">Processo</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#contato">Contato</a>
+  </div>
+) : (
+  <button
+    className="navbar__menu"
+    type="button"
+    aria-label="Abrir menu"
+  >
+    ☰
+  </button>
+)}
     </nav>
   );
 }
