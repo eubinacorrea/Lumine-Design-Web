@@ -1,8 +1,13 @@
 import "./SectionTitle.css";
 
-function SectionTitle({ eyebrow, title, description }) {
+function SectionTitle({
+  eyebrow,
+  title,
+  description,
+  variant = "dark",
+}) {
   return (
-    <div className="section-title">
+    <div className={`section-title section-title--${variant}`}>
       <p className="section-title__eyebrow">
         {eyebrow}
       </p>

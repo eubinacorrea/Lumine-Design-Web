@@ -2,6 +2,7 @@ import "./Contact.css";
 
 import Container from "../../components/Container/Container";
 import Button from "../../components/Button/Button";
+import ContactForm from "./ContactForm";
 
 function Contact({
   title,
@@ -29,15 +30,15 @@ function Contact({
           </div>
 
           <div className="contact__actions">
-            <a
+            <Button
+              as="a"
               href={whatsapp}
               target="_blank"
               rel="noreferrer"
+              className="contact__cta"
             >
-              <Button>
-                Falar no WhatsApp
-              </Button>
-            </a>
+              Falar no WhatsApp
+            </Button>
 
             <a
               className="contact__instagram"
@@ -49,6 +50,14 @@ function Contact({
             </a>
           </div>
 
+        </div>
+
+        <div className="contact__form-section">
+          <p className="contact__form-eyebrow">
+            Ou escreva pra gente
+          </p>
+
+          <ContactForm />
         </div>
       </Container>
     </section>

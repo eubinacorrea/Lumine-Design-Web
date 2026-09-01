@@ -34,6 +34,24 @@
   line-height: 1.6;
 }
 
+/* Para seções de FUNDO CLARO */
+.section-title--dark .section-title__heading {
+  color: #050505;
+}
+
+.section-title--dark .section-title__description {
+  color: #555;
+}
+
+/* Para seções de FUNDO ESCURO */
+.section-title--light .section-title__heading {
+  color: #fff;
+}
+
+.section-title--light .section-title__description {
+  color: #b8b8b8;
+}
+
 @media (max-width: 600px) {
   .section-title {
     grid-template-columns: 1fr;

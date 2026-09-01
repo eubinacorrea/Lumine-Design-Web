@@ -13,6 +13,7 @@ function Services({
     <section className="services" id="servicos">
       <Container>
         <SectionTitle
+          variant="light"
           eyebrow={eyebrow}
           title={title}
           description={description}

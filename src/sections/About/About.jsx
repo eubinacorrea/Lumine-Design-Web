@@ -14,10 +14,11 @@ function About({
     <section className="about" id="sobre">
       <Container>
         <SectionTitle
-          eyebrow={eyebrow}
-          title={title}
-          description={description}
-        />
+  variant="light"
+  eyebrow={eyebrow}
+  title={title}
+  description={description}
+/>
 
         <div className="about__content">
           <p className="about__text">

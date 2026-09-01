@@ -45,13 +45,58 @@
   flex-direction: column;
   align-items: flex-start;
 
-  gap: 24px;
+  gap: 32px;
+}
+
+/* CTA principal do fechamento da página: precisa de mais peso e contraste
+   do que o botão padrão do site (bordô sobre bordô perderia energia). */
+.contact .btn.contact__cta {
+  background: #fff;
+  color: var(--color-brand);
+
+  padding: 22px 40px;
+  font-size: 1.05rem;
+}
+
+.contact .btn.contact__cta:hover {
+  background: #f3f0eb;
 }
 
 .contact__instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
   color: #fff;
   text-decoration: none;
   font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.contact__instagram::after {
+  content: "→";
+  transition: transform 0.2s ease;
+}
+
+.contact__instagram:hover::after {
+  transform: translateX(4px);
+}
+
+.contact__form-section {
+  margin-top: 96px;
+  padding-top: 48px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact__form-eyebrow {
+  margin: 0 0 24px;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 @media (max-width: 760px) {
@@ -62,5 +107,10 @@
   .contact__content {
     grid-template-columns: 1fr;
     gap: 48px;
+  }
+
+  .contact__form-section {
+    margin-top: 64px;
+    padding-top: 40px;
   }
 }

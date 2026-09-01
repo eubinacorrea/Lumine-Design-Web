@@ -13,6 +13,10 @@ import FAQ from "./sections/FAQ/FAQ";
 import FAQItem from "./sections/FAQ/FAQItem";
 import Contact from "./sections/Contact/Contact";
 import Footer from "./sections/Footer/Footer";
+import Sabrina from "./assets/images/Sabrina.png"
+import Raoni from "./assets/images/Raoni.png"
+import ContactForm from "./sections/Contact/ContactForm";
+
 
 const services = [
   {
@@ -153,12 +157,14 @@ function App() {
   description="Design e tecnologia trabalhando juntos desde o início de cada projeto."
 >
   <TeamMember
+    image={<img src={Raoni} alt="Raoni" className="team-member__image" />}
     name="Raoni Roehe"
     role="Design & Branding"
     description="Responsável pela direção visual, identidade e construção das soluções de marca da Lúmine."
   />
 
   <TeamMember
+    image={<img src={Sabrina} alt="Sabrina" className="team-member__image" />}
     name="Sabrina"
     role="Desenvolvimento Web"
     description="Responsável por transformar estratégia e design em experiências digitais funcionais, responsivas e orientadas ao negócio."
@@ -182,7 +188,10 @@ function App() {
   description="Conte para a gente onde sua empresa está hoje e onde você quer chegar."
   whatsapp="https://wa.me/5547997417709"
   instagram="https://instagram.com/luminedesigncode"
+  
+  
 />
+
 <Footer
   instagram="https://instagram.com/luminedesigncode"
   whatsapp="https://wa.me/5547997417709"

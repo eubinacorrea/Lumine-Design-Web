@@ -4,11 +4,12 @@ function TeamMember({
   name,
   role,
   description,
+  image
 }) {
   return (
     <article className="team-member">
       <div className="team-member__image">
-        Foto
+      {image}
       </div>
 
       <div className="team-member__content">

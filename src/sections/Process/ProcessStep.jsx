@@ -1,31 +1,13 @@
-import "./Process.css";
+import "./ProcessStep.css";
 
-import Container from "../../components/Container/Container";
-import SectionTitle from "../../components/SectionTitle";
-
-function Process({
-  eyebrow,
-  title,
-  description,
-  children,
-}) {
+function ProcessStep({ number, title, description }) {
   return (
-    <section className="process" id="processo">
-      <Container>
-
-        <SectionTitle
-          eyebrow={eyebrow}
-          title={title}
-          description={description}
-        />
-
-        <div className="process__grid">
-          {children}
-        </div>
-
-      </Container>
-    </section>
+    <div className="process-step">
+      <span className="process-step__number">{number}</span>
+      <h3 className="process-step__title">{title}</h3>
+      <p className="process-step__description">{description}</p>
+    </div>
   );
 }
 
-export default Process;
+export default ProcessStep;
