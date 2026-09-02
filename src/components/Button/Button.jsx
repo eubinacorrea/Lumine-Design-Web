@@ -1,10 +1,18 @@
 import "./Button.css";
 
-function Button({ children }) {
+function Button({
+  children,
+  as: Component = "button",
+  className = "",
+  ...props
+}) {
   return (
-    <button className="button">
+    <Component
+      className={`button ${className}`}
+      {...props}
+    >
       {children}
-    </button>
+    </Component>
   );
 }
 

@@ -1,7 +1,7 @@
 .problem {
   padding-block: 120px;
 
-  background: var(--color-background, #050505);
+  background: var(--color-background, #cc3636);
 
   color: #fff;
 }
@@ -13,8 +13,7 @@
     minmax(160px, 0.35fr)
     minmax(0, 1fr);
 
-  column-gap: clamp(40px, 7vw, 120px);
-  row-gap: 16px;
+  gap: clamp(40px, 7vw, 120px);
 
   align-items: start;
 }
@@ -48,7 +47,7 @@
 
   max-width: 680px;
 
-  margin: 0;
+  margin: 24px 0 0;
 
   color: #c8c8c8;
 
@@ -65,10 +64,12 @@
   .problem__content {
     grid-template-columns: 1fr;
 
-    row-gap: 20px;
+    gap: 24px;
   }
 
   .problem__text {
     grid-column: auto;
+
+    margin-top: 0;
   }
 }

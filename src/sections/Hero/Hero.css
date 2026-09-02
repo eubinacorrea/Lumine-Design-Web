@@ -6,7 +6,7 @@
   min-height: 720px;
   padding: 150px 0 80px;
 
-  background: var(--color-background, #050505);
+  background: var(--color-background);
 }
 
 .hero .container {

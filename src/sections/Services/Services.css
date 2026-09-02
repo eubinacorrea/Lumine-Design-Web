@@ -1,7 +1,7 @@
 .services {
   padding: 120px 0;
 
-  background: #050505;
+  background: var(--color-background);
   color: #fff;
 }
 

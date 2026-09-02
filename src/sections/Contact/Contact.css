@@ -1,25 +1,42 @@
 .contact {
-  padding: 140px 0;
-
+  padding: 40px ;
   background: var(--color-brand);
   color: #fff;
-}
+  max-width: fit-content;
+  }
 
 .contact__content {
   display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
+  grid-template-columns: 20fr 10fr;
+    }
 
-  gap: 64px;
+  .atendimento{
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 1.30rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  line-height: 1.25;
+  
+}
 
-  align-items: end;
+.email__image{
+  padding-right: 10px;
+}
+.whatsapp__image{
+  padding-right: 10px;
+}
+.instagram__image{
+  padding-right: 10px;
+}
+
+.relogio__image{
+  padding-right: 8px;
+  width: 30px;
 }
 
 .contact__eyebrow {
   margin: 0 0 24px;
-
   font-size: 0.85rem;
   font-weight: 700;
-
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -27,16 +44,16 @@
 .contact__title {
   max-width: 850px;
   margin: 0 0 28px;
-
   font-size: clamp(3rem, 5vw, 6rem);
   line-height: 1;
   letter-spacing: -0.04em;
+  
 }
 
 .contact__description {
   max-width: 620px;
   margin: 0;
-
+padding: 10px;
   line-height: 1.6;
 }
 
@@ -44,59 +61,29 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
   gap: 32px;
 }
 
-/* CTA principal do fechamento da página: precisa de mais peso e contraste
-   do que o botão padrão do site (bordô sobre bordô perderia energia). */
-.contact .btn.contact__cta {
-  background: #fff;
-  color: var(--color-brand);
-
-  padding: 22px 40px;
-  font-size: 1.05rem;
-}
-
-.contact .btn.contact__cta:hover {
-  background: #f3f0eb;
-}
-
-.contact__instagram {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-
-  color: #fff;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 1.15rem;
-}
-
-.contact__instagram::after {
-  content: "→";
-  transition: transform 0.2s ease;
-}
-
-.contact__instagram:hover::after {
-  transform: translateX(4px);
-}
-
 .contact__form-section {
-  margin-top: 96px;
+  margin-top: 30px;
   padding-top: 48px;
+  border-top: 1px solid rgba(255, 255, 255, 0.46);
+}
 
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+.contact__cta{
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: 0.07rem;
 }
 
 .contact__form-eyebrow {
   margin: 0 0 24px;
-
   font-size: 0.85rem;
   font-weight: 700;
-
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  
 }
 
 @media (max-width: 760px) {

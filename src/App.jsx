@@ -15,7 +15,8 @@ import Contact from "./sections/Contact/Contact";
 import Footer from "./sections/Footer/Footer";
 import Sabrina from "./assets/images/Sabrina.png"
 import Raoni from "./assets/images/Raoni.png"
-import ContactForm from "./sections/Contact/ContactForm";
+
+
 
 
 const services = [
@@ -183,19 +184,21 @@ function App() {
     />
   ))}
 </FAQ>
+
 <Contact
   title="Seu negócio pode ser o nosso próximo projeto."
   description="Conte para a gente onde sua empresa está hoje e onde você quer chegar."
-  whatsapp="https://wa.me/5547997417709"
+  relogio="Das 07:00 às 18:30 de Segunda-feira a Sexta-feira, das 09:00 às 14:00 Aos Sábados e Fechado aos Domingos"
+  whatsapp="https://wa.me/5547997417709" 
   instagram="https://instagram.com/luminedesigncode"
+  email="contato@lumine.art.br"
+    />
   
-  
-/>
 
 <Footer
   instagram="https://instagram.com/luminedesigncode"
   whatsapp="https://wa.me/5547997417709"
-/>
+  />
       </main>
     </>
   );

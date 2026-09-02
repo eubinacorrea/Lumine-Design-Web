@@ -2,6 +2,10 @@ import "./Contact.css";
 
 import Container from "../../components/Container/Container";
 import Button from "../../components/Button/Button";
+import Instagram from "../../assets/icons/Instagram.png"
+import Whatsapp from "../../assets/icons/Whatsapp.png"
+import Envelope from "../../assets/icons/envelope.png"
+import Relogio from "../../assets/icons/relogio.png"
 import ContactForm from "./ContactForm";
 
 function Contact({
@@ -9,6 +13,8 @@ function Contact({
   description,
   whatsapp,
   instagram,
+  email,
+  relogio
 }) {
   return (
     <section className="contact" id="contato">
@@ -30,25 +36,30 @@ function Contact({
           </div>
 
           <div className="contact__actions">
+            
             <Button
-              as="a"
-              href={whatsapp}
-              target="_blank"
-              rel="noreferrer"
-              className="contact__cta"
-            >
-              Falar no WhatsApp
+              as="a" href={whatsapp} target="_blank" rel="noreferrer" className="contact__cta" >
+              <img src={Whatsapp} alt="Whatsapp" className="whatsapp__image" />
+              +55 47 99741-7709
             </Button>
 
-            <a
-              className="contact__instagram"
-              href={instagram}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Instagram
-            </a>
+            <Button
+              as="a" href={instagram} target="_blank" rel="noreferrer" className="contact__cta">
+              <img src={Instagram} alt="Instagram" className="instagram__image"/> 
+               @luminedesigncode
+            </Button>
+
+            <Button as="a" href={email} target="_blank" rel="noreferrer" className="contact__cta">
+              <img src={Envelope} alt="Email" className="email__image"/>
+              contato@lumine.art.br
+            </Button>
+
+            <div className="atendimento">
+            <img src={Relogio} alt="Relogio" className="relogio__image" />
+            {relogio}
+            </div>
           </div>
+          
 
         </div>
 

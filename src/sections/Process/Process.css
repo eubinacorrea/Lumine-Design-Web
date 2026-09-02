@@ -1,6 +1,6 @@
 .process {
   padding: 120px 0;
-  background: #f3f0eb;
+  background:var(--color-background);
   color: #050505;
 }
 

@@ -1,33 +1,44 @@
 .contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  width: 100%;
+}
+
+.contact-form__field {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 8px;
+}
 
-  max-width: 520px;
+/* Faz o campo de mensagem ocupar a linha inteira */
+.contact-form__field:nth-child(3) {
+  grid-column: 1 / -1;
 }
 
 .contact-form__field label {
-  display: block;
-  margin-bottom: 8px;
-
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-
-  color: rgba(255, 255, 255, 0.85);
+  color: #fff;
 }
 
 .contact-form__field input,
 .contact-form__field textarea {
-  width: 100%;
-  background: #fff;
-  border: 1.5px solid transparent;
-  padding: 14px 16px;
-
+  padding: 16px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
   font-family: inherit;
-  font-size: 0.95rem;
-  color: #050505;
+  transition: border-color 0.2s ease;
+}
+
+.contact-form__field input:focus,
+.contact-form__field textarea:focus {
+  border-color: #fff;
 }
 
 .contact-form__field textarea {
@@ -35,45 +46,13 @@
   resize: vertical;
 }
 
-.contact-form__field input:focus,
-.contact-form__field textarea:focus {
-  outline: none;
-  border-color: #050505;
-}
-
 .contact-form__submit {
-  align-self: flex-start;
-
-  background: #fff;
-  color: var(--color-brand);
-  border: none;
-  padding: 16px 32px;
-
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 0.95rem;
-
-  cursor: pointer;
-  transition: background 0.2s ease;
+ width: auto;
+ justify-self: start;
 }
 
-.contact-form__submit:hover {
-  background: #f3f0eb;
-}
-
-.contact-form__submit:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-.contact-form__success {
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-
-.contact-form__error {
-  margin-top: -4px;
-
-  font-size: 0.85rem;
-  color: #ffd7d7;
+@media (max-width: 760px) {
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
 }

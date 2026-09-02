@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./ContactForm.css";
+import Button from "../../components/Button/Button"
 
 // Chave gratuita gerada em https://web3forms.com (login com o e-mail da Lúmine).
 // Trocar pelo valor real antes de publicar.
@@ -88,13 +89,13 @@ function ContactForm() {
         />
       </div>
 
-      <button
+      <Button 
         type="submit"
         className="contact-form__submit"
-        disabled={status === "sending"}
+        disabled={status === "sending"} 
       >
         {status === "sending" ? "Enviando..." : "Enviar mensagem"}
-      </button>
+      </Button>
 
       {status === "error" && (
         <p className="contact-form__error">
