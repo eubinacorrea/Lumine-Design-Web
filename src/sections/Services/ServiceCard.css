@@ -28,6 +28,18 @@
     border-color 0.3s ease;
 }
 
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 32px;
+  width: 72px;
+  height: 2px;
+
+  background: linear-gradient(90deg, var(--color-glow-warm), transparent);
+  box-shadow: 0 0 20px rgba(211, 154, 114, 0.38);
+}
+
 .service-card:hover {
   transform: translateY(-6px);
 

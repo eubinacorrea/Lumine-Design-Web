@@ -1,7 +1,7 @@
 import Hero from "./sections/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
 import Problem from "./sections/Problem/Problem";
-import lumineLogo from "./assets/images/conceito.svg";
+import VideoPlaceholder from "./components/VideoPlaceholder/VideoPlaceholder";
 import ServiceCard from "./sections/Services/ServiceCard";
 import Services from "./sections/Services/Services";
 import Process from "./sections/Process/Process";
@@ -105,22 +105,41 @@ function App() {
 
       <main>
         <Hero
-          title="Uma presença mais clara para o seu negócio crescer."
-          text="Unimos estratégia, design e tecnologia para ajudar sua empresa a ser encontrada, transmitir confiança e se conectar com mais clientes."
-          buttonText="Quero falar sobre meu negócio"
+          title="O valor do seu negócio precisa ser visto."
+          text="A Lúmine organiza sua marca, sua comunicação e sua presença digital para que mais pessoas entendam o que sua empresa oferece e por que escolhê-la."
+          buttonText="Vamos iluminar esse caminho"
           buttonHref="#contato"
-          img={<img src={lumineLogo} alt="" className="hero__image" />}
+          visual={
+            <VideoPlaceholder
+              variant="portrait"
+              label="A luz encontra o negócio"
+              description="Movimento principal da Hero: presença, descoberta e transformação."
+            />
+          }
         />
 
         <Problem
           text="O que pode estar acontecendo"
-          title="Um bom negócio também precisa ser bem apresentado."
-          problemText="Quando a marca não comunica com clareza ou é difícil de encontrar, as pessoas podem não perceber tudo o que a empresa tem a oferecer."
+          title="Quando falta clareza, boas empresas passam despercebidas."
+          problemText="Se a marca não mostra o que torna o negócio diferente, as pessoas podem não entender seu valor — mesmo quando o produto ou serviço é excelente."
+          media={
+            <VideoPlaceholder
+              label="O valor que ainda não aparece"
+              description="Vídeo de reconhecimento do problema: algo bom que permanece fora do campo de visão."
+            />
+          }
         />
         <Services
           eyebrow="Como ajudamos"
-          title="Soluções que fazem sentido para o momento da sua empresa."
-          description="Entendemos o que você precisa e reunimos as áreas certas para construir uma presença mais clara e profissional."
+          title="Tornamos mais claro o que sua empresa tem de melhor."
+          description="Da marca ao site, organizamos cada ponto de contato para que seu negócio seja compreendido, encontrado e lembrado."
+          concept="Clareza para comunicar. Presença para ser encontrado. Experiência para aproximar."
+          media={
+            <VideoPlaceholder
+              label="Da clareza à evolução"
+              description="Vídeo de solução: a luz ganha direção, revela caminhos e cria movimento."
+            />
+          }
         >
           {services.map((service) => (
             <ServiceCard
