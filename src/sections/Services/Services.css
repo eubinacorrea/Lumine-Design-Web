@@ -1,8 +1,8 @@
 .services {
   padding: 120px 0;
 
-  background: var(--color-background);
-  color: #fff;
+  background: var(--color-background-dark);
+  color: var(--color-text-light);
 }
 
 .services__grid {

@@ -1,7 +1,7 @@
 .process {
   padding: 120px 0;
-  background:var(--color-background);
-  color: #050505;
+  background: var(--color-background-light);
+  color: var(--color-text-dark);
 }
 
 .process__grid {

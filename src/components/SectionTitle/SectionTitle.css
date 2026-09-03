@@ -30,26 +30,26 @@
   max-width: 650px;
   margin: 0;
 
-  color: #555;
+  color: var(--color-text-muted-dark);
   line-height: 1.6;
 }
 
 /* Para seções de FUNDO CLARO */
 .section-title--dark .section-title__heading {
-  color: #050505;
+  color: var(--color-text-dark);
 }
 
 .section-title--dark .section-title__description {
-  color: #555;
+  color: var(--color-text-muted-dark);
 }
 
 /* Para seções de FUNDO ESCURO */
 .section-title--light .section-title__heading {
-  color: #fff;
+  color: var(--color-text-light);
 }
 
 .section-title--light .section-title__description {
-  color: #b8b8b8;
+  color: var(--color-text-muted-light);
 }
 
 @media (max-width: 600px) {

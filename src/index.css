@@ -15,9 +15,9 @@ section[id] {
 
 body{
 
-background:var(--color-background);
+background: var(--color-background-dark);
 
-color:var(--color-text);
+color: var(--color-text-light);
 
 font-family:Arial, Helvetica, sans-serif;
 

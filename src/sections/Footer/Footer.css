@@ -1,6 +1,6 @@
 .footer {
   padding: 24px 0;
-  background: #050505;
+  background: var(--color-background-dark);
 }
 
 .footer__top {
@@ -56,7 +56,7 @@
   align-items: center;
   justify-content: center;
   width: 42px;
-  color: #fff;
+  color: var(--color-text-light);
   transition: transform 0.2s ease;
 }
 

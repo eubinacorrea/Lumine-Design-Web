@@ -1,9 +1,9 @@
 .problem {
   padding-block: 120px;
 
-  background: var(--color-background, #cc3636);
+  background: var(--color-background-dark);
 
-  color: #fff;
+  color: var(--color-text-light);
 }
 
 .problem__content {
@@ -49,7 +49,7 @@
 
   margin: 24px 0 0;
 
-  color: #c8c8c8;
+  color: var(--color-text-muted-light);
 
   font-size: clamp(1rem, 1.3vw, 1.25rem);
 

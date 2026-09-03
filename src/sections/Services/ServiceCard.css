@@ -7,8 +7,8 @@
 
   padding: 32px;
 
-  background: #f3f0eb;
-  color: #050505;
+  background: var(--color-background-light);
+  color: var(--color-text-dark);
 
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
@@ -33,7 +33,7 @@
 .service-card__title {
   margin: auto 0 16px;
 
-  color: #050505;
+  color: var(--color-text-dark);
 
   font-size: 1.6rem;
   font-weight: 700;
@@ -44,7 +44,7 @@
 .service-card__description {
   margin: 0;
 
-  color: #555;
+  color: var(--color-text-muted-dark);
 
   line-height: 1.6;
 }

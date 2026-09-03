@@ -1,33 +1,30 @@
-:root{
+:root {
+  --color-background-dark: #050505;
+  --color-background-light: #f3f0eb;
+  --color-surface-dark: #111111;
 
---color-background:#8a89888d;
+  --color-text-light: #f8f8f8;
+  --color-text-muted-light: #c8c8c8;
+  --color-text-dark: #050505;
+  --color-text-muted-dark: #555555;
 
---color-surface:#111111;
+  --color-brand: #72002c;
+  --color-brand-hover: #8a0c3a;
+  --color-border: rgba(255, 255, 255, 0.12);
 
---color-text:#f8f8f8;
+  /* Compatibilidade com os componentes existentes. */
+  --color-background: var(--color-background-dark);
+  --color-surface: var(--color-surface-dark);
+  --color-text: var(--color-text-light);
+  --color-text-secondary: var(--color-text-muted-light);
 
---color-text-secondary:#c7c7c7;
+  --container: 1440px;
+  --header-height: 90px;
 
---color-brand:#72002C;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 28px;
 
---color-brand-hover: #8a0c3a;
-
---color-border:rgba(255,255,255,.12);
-
---container:1440px;
-
---header-height:90px;
-
---radius-sm:8px;
-
---radius-md:16px;
-
---radius-lg:28px;
-
---shadow:
-
-0 15px 50px rgba(0,0,0,.25);
-
---transition:.3s ease;
-
+  --shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+  --transition: 0.3s ease;
 }

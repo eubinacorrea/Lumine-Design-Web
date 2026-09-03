@@ -50,7 +50,7 @@
   transform: rotate(180deg);
   background: var(--wine, #810027);
   border-color: var(--wine, #810027);
-  color: #fff;
+  color: var(--color-text-light);
 }
 
 /* Expansão via grid-template-rows: 0fr -> 1fr, sem JS medindo altura. */
@@ -73,7 +73,7 @@
   margin: 0;
   padding-top: 14px;
 
-  color: #555;
+  color: var(--color-text-muted-dark);
   line-height: 1.6;
 }
 

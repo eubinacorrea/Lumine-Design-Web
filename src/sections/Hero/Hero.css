@@ -6,7 +6,7 @@
   min-height: 720px;
   padding: 150px 0 80px;
 
-  background: var(--color-background);
+  background: var(--color-background-dark);
 }
 
 .hero .container {
@@ -46,7 +46,7 @@
 
   margin: 0 0 36px;
 
-  color: #fff;
+  color: var(--color-text-light);
 
   font-size: 3rem;
   font-weight: 700;

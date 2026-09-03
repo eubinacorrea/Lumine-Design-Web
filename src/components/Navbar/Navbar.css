@@ -32,7 +32,7 @@
 }
 
 .navbar__links a {
-  color: #fff;
+  color: var(--color-text-light);
 
   font-size: 0.95rem;
   font-weight: 600;
@@ -55,7 +55,7 @@
   align-items: center;
   justify-content: center;
 
-  color: #fff;
+  color: var(--color-text-light);
   background: var(--color-brand);
 
   border: 0;
@@ -84,7 +84,7 @@
   align-items: center;
   justify-content: center;
 
-  background: #050505;
+  background: var(--color-background-dark);
 
   z-index: 2000;
 }
@@ -94,7 +94,7 @@
   top: 32px;
   right: 48px;
 
-  color: #fff;
+  color: var(--color-text-light);
   background: none;
 
   border: 0;
@@ -115,7 +115,7 @@
 }
 
 .menu-overlay__links a {
-  color: #fff;
+  color: var(--color-text-light);
 
   font-size: clamp(2.5rem, 6vw, 5rem);
   font-weight: 700;

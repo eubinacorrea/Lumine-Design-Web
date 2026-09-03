@@ -48,7 +48,7 @@
 .team-member__description {
   margin: 0;
 
-  color: #555;
+  color: var(--color-text-muted-dark);
   line-height: 1.6;
 }
 
