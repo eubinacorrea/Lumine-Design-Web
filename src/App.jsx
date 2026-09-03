@@ -24,21 +24,21 @@ const services = [
     id: 1,
     title: "Presença Digital",
     description:
-      "Soluções para melhorar a forma como sua empresa aparece e é percebida no ambiente digital.",
+      "Organizamos os canais e pontos de contato para sua empresa ser encontrada e transmitir confiança.",
   },
 
   {
     id: 2,
-    title: "Marca & Posicionamento",
+    title: "Marca e Posicionamento",
     description:
-      "Estratégia e identidade para comunicar valor com mais clareza, consistência e profissionalismo.",
+      "Criamos uma identidade clara e coerente, que mostra quem sua empresa é e o valor que entrega.",
   },
 
   {
     id: 3,
     title: "Experiências Web",
     description:
-      "Sites e soluções digitais pensados para conectar sua empresa aos clientes de forma simples e eficiente.",
+      "Desenvolvemos sites simples de usar, bem apresentados e alinhados aos objetivos do negócio.",
   },
 ];
 const processSteps = [
@@ -47,28 +47,28 @@ const processSteps = [
     number: "01",
     title: "Entendemos",
     description:
-      "Conhecemos seu negócio, seu momento e os objetivos que você deseja alcançar.",
+      "Conversamos sobre seu negócio, suas necessidades e o que você deseja alcançar.",
   },
   {
     id: 2,
     number: "02",
     title: "Planejamos",
     description:
-      "Definimos prioridades, estratégia e o caminho mais adequado para o projeto.",
+      "Organizamos as prioridades e definimos o melhor caminho para o projeto.",
   },
   {
     id: 3,
     number: "03",
     title: "Criamos",
     description:
-      "Transformamos estratégia em design, presença digital e tecnologia.",
+      "Transformamos o planejamento em soluções claras, funcionais e bem apresentadas.",
   },
   {
     id: 4,
     number: "04",
-    title: "Evoluímos",
+    title: "Aprimoramos",
     description:
-      "Acompanhamos o projeto e identificamos oportunidades para os próximos passos.",
+      "Avaliamos o resultado e identificamos o que pode ser ajustado ou desenvolvido a seguir.",
   },
 ];
 const faqItems = [
@@ -76,25 +76,25 @@ const faqItems = [
     id: 1,
     question: "Vocês atendem clientes em todo o Brasil?",
     answer:
-      "Sim. Nosso atendimento é remoto e podemos desenvolver projetos para empresas de diferentes regiões do país.",
+      "Sim. Nosso atendimento pode ser feito online e desenvolvemos projetos para empresas de diferentes regiões do país.",
   },
   {
     id: 2,
-    question: "Posso contratar apenas um serviço?",
+    question: "Posso contratar somente um serviço?",
     answer:
-      "Sim. Cada projeto é avaliado de acordo com a necessidade e o momento do negócio.",
+      "Sim. Primeiro entendemos sua necessidade e depois indicamos o formato mais adequado para o momento da empresa.",
   },
   {
     id: 3,
     question: "Como funciona o orçamento?",
     answer:
-      "Primeiro entendemos o que sua empresa precisa. Depois definimos escopo, prioridades e apresentamos uma proposta adequada ao projeto.",
+      "Começamos com uma conversa para entender o que você precisa. Depois organizamos o projeto e apresentamos uma proposta com etapas, prazos e valores.",
   },
   {
     id: 4,
     question: "Os projetos são personalizados?",
     answer:
-      "Sim. A proposta da Lúmine é desenvolver soluções adequadas à realidade, aos objetivos e à identidade de cada cliente.",
+      "Sim. Cada solução é pensada de acordo com a realidade, os objetivos e a identidade de cada empresa.",
   },
 ];
 
@@ -105,22 +105,22 @@ function App() {
 
       <main>
         <Hero
-          title="Sua empresa merece ser encontrada, lembrada e escolhida."
-          text="Construímos marcas unindo estratégia, design e tecnologia. Fortalecemos a presença digital e criamos soluções para transformar bons negócios em empresas encontradas, lembradas e escolhidas."
-          buttonText="Quero crescer minha empresa"
+          title="Uma presença mais clara para o seu negócio crescer."
+          text="Unimos estratégia, design e tecnologia para ajudar sua empresa a ser encontrada, transmitir confiança e se conectar com mais clientes."
+          buttonText="Quero falar sobre meu negócio"
           buttonHref="#contato"
           img={<img src={lumineLogo} alt="" className="hero__image" />}
         />
 
         <Problem
-          text="O problema"
-          title="Muitos negócios são excelentes, mas ninguém os encontra."
-          problemText="Uma marca pouco clara, uma presença digital fraca ou a ausência nas buscas podem fazer uma boa empresa parecer menos preparada do que realmente é."
+          text="O que pode estar acontecendo"
+          title="Um bom negócio também precisa ser bem apresentado."
+          problemText="Quando a marca não comunica com clareza ou é difícil de encontrar, as pessoas podem não perceber tudo o que a empresa tem a oferecer."
         />
         <Services
-          eyebrow="Como podemos ajudar"
-          title="Estratégia, design e tecnologia trabalhando juntos."
-          description="Criamos soluções para fortalecer marcas, melhorar a presença digital e aproximar empresas de seus clientes."
+          eyebrow="Como ajudamos"
+          title="Soluções que fazem sentido para o momento da sua empresa."
+          description="Entendemos o que você precisa e reunimos as áreas certas para construir uma presença mais clara e profissional."
         >
           {services.map((service) => (
             <ServiceCard
@@ -132,9 +132,9 @@ function App() {
         </Services>
 
         <Process
-          eyebrow="Nosso processo"
-          title="Um caminho claro do primeiro contato ao resultado."
-          description="Cada projeto é diferente, mas nossa forma de trabalhar mantém estratégia, proximidade e clareza em todas as etapas."
+          eyebrow="Como trabalhamos"
+          title="Um processo simples, feito em conjunto."
+          description="Você acompanha cada etapa e entende o que está sendo feito, por que e qual será o próximo passo."
         >
           {processSteps.map((step) => (
             <ProcessStep
@@ -147,35 +147,35 @@ function App() {
         </Process>
         <About
   eyebrow="Sobre a Lúmine"
-  title="Estratégia e execução no mesmo lugar."
-  description="A Lúmine nasceu da união entre design e desenvolvimento para ajudar empresas a construir uma presença mais clara, profissional e preparada para crescer."
-  text="Unimos visão de marca, comunicação e tecnologia para desenvolver soluções pensadas de acordo com a realidade de cada negócio."
-  highlight="Do autônomo ao empresário, acreditamos que todo bom negócio merece a oportunidade de ser encontrado, reconhecido e escolhido."
+  title="Design e tecnologia com o mesmo objetivo: ajudar seu negócio."
+  description="A Lúmine nasceu da parceria entre duas áreas que funcionam melhor quando trabalham juntas."
+  text="Pensamos na marca, na comunicação e na experiência, mas também em como cada solução funcionará no dia a dia."
+  highlight="Assim, cada projeto fica mais claro, coerente e adequado à realidade da empresa."
 />
 
 <Team
-  eyebrow="Quem faz acontecer"
-  title="Duas especialidades. Uma mesma direção."
-  description="Design e tecnologia trabalhando juntos desde o início de cada projeto."
+  eyebrow="Quem está por trás"
+  title="Duas especialidades, trabalhando lado a lado."
+  description="Raoni e Sabrina acompanham cada projeto de perto, do planejamento à entrega."
 >
   <TeamMember
     image={<img src={Raoni} alt="Raoni" className="team-member__image" />}
     name="Raoni Roehe"
-    role="Design & Branding"
-    description="Responsável pela direção visual, identidade e construção das soluções de marca da Lúmine."
+    role="Design e Branding"
+    description="Cuida da estratégia de marca, da identidade visual e da direção criativa dos projetos."
   />
 
   <TeamMember
     image={<img src={Sabrina} alt="Sabrina" className="team-member__image" />}
     name="Sabrina"
     role="Desenvolvimento Web"
-    description="Responsável por transformar estratégia e design em experiências digitais funcionais, responsivas e orientadas ao negócio."
+    description="Cuida do desenvolvimento e transforma as decisões do projeto em experiências digitais que funcionam bem em diferentes telas."
   />
 </Team>
 <FAQ
   eyebrow="Perguntas frequentes"
-  title="Algumas respostas antes de começarmos."
-  description="Se ainda restar alguma dúvida, fale diretamente com a gente."
+  title="Algumas respostas para ajudar você a começar."
+  description="Se a sua dúvida não estiver aqui, entre em contato conosco."
 >
   {faqItems.map((item) => (
     <FAQItem
@@ -187,8 +187,8 @@ function App() {
 </FAQ>
 
 <Contact
-  title="Seu negócio pode ser o nosso próximo projeto."
-  description="Conte para a gente onde sua empresa está hoje e onde você quer chegar."
+  title="Vamos entender o que seu negócio precisa?"
+  description="Conte onde sua empresa está hoje e o que você gostaria de melhorar. Nós ajudamos a organizar os próximos passos."
   relogio="Atendimento das 07:00 às 18:30 de segunda-feira a sexta-feira, das 09:00 às 14:00 aos sábados e fechado aos domingos."
   whatsapp="https://wa.me/5547997417709" 
   instagram="https://instagram.com/luminedesigncode"
