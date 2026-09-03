@@ -27,18 +27,20 @@
 .contact-form__field input,
 .contact-form__field textarea {
   padding: 16px;
-  background: transparent;
+  background: rgba(11, 8, 10, 0.16);
   border: 1px solid rgba(255, 255, 255, 0.3);
   color: #fff;
   font-size: 1rem;
   outline: none;
   font-family: inherit;
   transition: border-color 0.2s ease;
+  border-radius: var(--radius-sm);
 }
 
 .contact-form__field input:focus,
 .contact-form__field textarea:focus {
-  border-color: #fff;
+  border-color: var(--color-glow-warm);
+  box-shadow: 0 0 0 3px rgba(211, 154, 114, 0.1);
 }
 
 .contact-form__field textarea {

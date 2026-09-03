@@ -1,7 +1,9 @@
 .faq {
   padding: 120px 0;
-  background: var(--color-background-light);
-  color: var(--color-text-dark);
+  background:
+    radial-gradient(circle at 92% 45%, rgba(179, 52, 103, 0.16), transparent 28rem),
+    linear-gradient(180deg, #0c090b, #120b0f);
+  color: var(--color-text-light);
 }
 
 .faq__list {

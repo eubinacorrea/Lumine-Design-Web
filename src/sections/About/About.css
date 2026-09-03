@@ -1,6 +1,8 @@
 .about {
   padding: 120px 0;
-  background: var(--color-background-dark);
+  background:
+    radial-gradient(ellipse at 78% 50%, rgba(179, 52, 103, 0.2), transparent 34rem),
+    linear-gradient(180deg, #100b0e, #160d13 55%, #110a0f);
   color: var(--color-text-light);
 }
 

@@ -1,7 +1,9 @@
 .process {
   padding: 120px 0;
-  background: var(--color-background-light);
-  color: var(--color-text-dark);
+  background:
+    radial-gradient(circle at 12% 35%, rgba(211, 154, 114, 0.1), transparent 26rem),
+    linear-gradient(180deg, #0d090b, #151014 58%, #100b0e);
+  color: var(--color-text-light);
 }
 
 .process__grid {

@@ -1,7 +1,9 @@
 .problem {
   padding-block: 120px;
 
-  background: var(--color-background-dark);
+  background:
+    radial-gradient(circle at 8% 55%, rgba(114, 0, 44, 0.19), transparent 28rem),
+    linear-gradient(180deg, #100a0e, #120c10);
 
   color: var(--color-text-light);
 }
@@ -21,7 +23,7 @@
 .problem__eyebrow {
   margin: 0;
 
-  color: var(--color-brand);
+  color: var(--color-glow-warm);
 
   font-size: 0.85rem;
   font-weight: 700;

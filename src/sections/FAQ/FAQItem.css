@@ -1,10 +1,10 @@
 .faq-item {
   padding: 28px 0;
-  border-top: 1px solid rgba(5, 5, 5, 0.18);
+  border-top: 1px solid var(--color-border);
 }
 
 .faq-item:last-child {
-  border-bottom: 1px solid rgba(5, 5, 5, 0.18);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .faq-item__heading {
@@ -40,7 +40,7 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  border: 1px solid rgba(5, 5, 5, 0.18);
+  border: 1px solid var(--color-border);
   font-size: 1.4rem;
   line-height: 1;
   transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
@@ -48,8 +48,8 @@
 
 .faq-item--open .faq-item__icon {
   transform: rotate(180deg);
-  background: var(--wine, #810027);
-  border-color: var(--wine, #810027);
+  background: linear-gradient(135deg, var(--color-brand-bright), var(--color-brand));
+  border-color: transparent;
   color: var(--color-text-light);
 }
 
@@ -73,7 +73,7 @@
   margin: 0;
   padding-top: 14px;
 
-  color: var(--color-text-muted-dark);
+  color: var(--color-text-muted-light);
   line-height: 1.6;
 }
 

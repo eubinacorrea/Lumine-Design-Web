@@ -1,7 +1,9 @@
 .team {
   padding: 120px 0;
-  background: var(--color-background-light);
-  color: var(--color-text-dark);
+  background:
+    radial-gradient(circle at 8% 20%, rgba(114, 0, 44, 0.24), transparent 30rem),
+    linear-gradient(180deg, #110a0f, #0c090b);
+  color: var(--color-text-light);
 }
 
 .team__grid {

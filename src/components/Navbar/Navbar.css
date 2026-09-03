@@ -22,7 +22,9 @@
 
 .navbar--scrolled {
   padding-block: 18px;
-  background: rgba(5, 5, 5, 0.92);
+  background: rgba(11, 8, 10, 0.78);
+  border-bottom: 1px solid var(--color-border);
+  backdrop-filter: blur(18px);
 }
 
 .navbar__links {
@@ -43,7 +45,7 @@
 }
 
 .navbar__links a:hover {
-  color: var(--color-brand);
+  color: var(--color-glow-warm);
 }
 
 .navbar__menu {
@@ -56,7 +58,7 @@
   justify-content: center;
 
   color: var(--color-text-light);
-  background: var(--color-brand);
+  background: linear-gradient(135deg, var(--color-brand-bright), var(--color-brand));
 
   border: 0;
   border-radius: 50%;
@@ -84,7 +86,9 @@
   align-items: center;
   justify-content: center;
 
-  background: var(--color-background-dark);
+  background:
+    radial-gradient(circle at 50% 35%, rgba(114, 0, 44, 0.5), transparent 42%),
+    var(--color-background-dark);
 
   z-index: 2000;
 }
@@ -128,7 +132,7 @@
 }
 
 .menu-overlay__links a:hover {
-  color: var(--color-brand);
+  color: var(--color-glow-warm);
 }
 
 

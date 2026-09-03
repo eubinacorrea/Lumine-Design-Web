@@ -7,7 +7,7 @@
 .section-title__eyebrow {
   margin: 0;
 
-  color: var(--color-brand);
+  color: var(--color-glow-warm);
   font-size: 0.85rem;
   font-weight: 700;
 
@@ -36,11 +36,11 @@
 
 /* Para seções de FUNDO CLARO */
 .section-title--dark .section-title__heading {
-  color: var(--color-text-dark);
+  color: var(--color-text-light);
 }
 
 .section-title--dark .section-title__description {
-  color: var(--color-text-muted-dark);
+  color: var(--color-text-muted-light);
 }
 
 /* Para seções de FUNDO ESCURO */

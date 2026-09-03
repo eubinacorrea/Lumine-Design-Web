@@ -1,7 +1,9 @@
 .services {
   padding: 120px 0;
 
-  background: var(--color-background-dark);
+  background:
+    radial-gradient(circle at 88% 20%, rgba(114, 0, 44, 0.28), transparent 34rem),
+    linear-gradient(180deg, #120c10, #0d090b);
   color: var(--color-text-light);
 }
 

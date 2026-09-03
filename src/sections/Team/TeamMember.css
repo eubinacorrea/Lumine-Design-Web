@@ -5,7 +5,7 @@
 
   padding-top: 24px;
 
-  border-top: 1px solid rgba(5, 5, 5, 0.2);
+  border-top: 1px solid var(--color-border);
 }
 
 .team-member__image {
@@ -16,7 +16,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #ddd;
+  background: var(--color-surface-dark);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
 }
 
 .team-member__image img {
@@ -36,7 +39,7 @@
 .team-member__role {
   margin: 0 0 24px;
 
-  color: var(--color-brand);
+  color: var(--color-glow-warm);
 
   font-size: 0.85rem;
   font-weight: 700;
@@ -48,7 +51,7 @@
 .team-member__description {
   margin: 0;
 
-  color: var(--color-text-muted-dark);
+  color: var(--color-text-muted-light);
   line-height: 1.6;
 }
 
