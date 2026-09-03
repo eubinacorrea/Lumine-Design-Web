@@ -13,8 +13,8 @@ import FAQ from "./sections/FAQ/FAQ";
 import FAQItem from "./sections/FAQ/FAQItem";
 import Contact from "./sections/Contact/Contact";
 import Footer from "./sections/Footer/Footer";
-import Sabrina from "./assets/images/Sabrina.png"
-import Raoni from "./assets/images/Raoni.png"
+import Sabrina from "./assets/images/Sabrina.png";
+import Raoni from "./assets/images/Raoni.png";
 
 
 
@@ -108,7 +108,8 @@ function App() {
           title="Sua empresa merece ser encontrada, lembrada e escolhida."
           text="Construímos marcas unindo estratégia, design e tecnologia. Fortalecemos a presença digital e criamos soluções para transformar bons negócios em empresas encontradas, lembradas e escolhidas."
           buttonText="Quero crescer minha empresa"
-          img={<img src={lumineLogo} alt="Logo" className="hero__image" />}
+          buttonHref="#contato"
+          img={<img src={lumineLogo} alt="" className="hero__image" />}
         />
 
         <Problem
@@ -188,7 +189,7 @@ function App() {
 <Contact
   title="Seu negócio pode ser o nosso próximo projeto."
   description="Conte para a gente onde sua empresa está hoje e onde você quer chegar."
-  relogio="Das 07:00 às 18:30 de Segunda-feira a Sexta-feira, das 09:00 às 14:00 Aos Sábados e Fechado aos Domingos"
+  relogio="Atendimento das 07:00 às 18:30 de segunda-feira a sexta-feira, das 09:00 às 14:00 aos sábados e fechado aos domingos."
   whatsapp="https://wa.me/5547997417709" 
   instagram="https://instagram.com/luminedesigncode"
   email="contato@lumine.art.br"

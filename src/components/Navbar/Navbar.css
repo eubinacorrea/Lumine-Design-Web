@@ -66,6 +66,14 @@
   cursor: pointer;
 }
 
+.navbar--scrolled .navbar__links {
+  display: none;
+}
+
+.navbar--scrolled .navbar__menu {
+  display: flex;
+}
+
 /* MENU ABERTO */
 
 .menu-overlay {
