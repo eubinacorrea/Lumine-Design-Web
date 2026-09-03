@@ -16,14 +16,26 @@ function Footer({ instagram, whatsapp }) {
             Design, estratégia e tecnologia para quem quer crescer.
           </p>
           <div className="footer__links">
-            <p className="footer_localtion">Atendimento remoto em todo o Brasil.</p>
-            <a href={instagram} target="_blank" rel="noreferrer">
+            <p className="footer__location">
+              Atendimento remoto em todo o Brasil.
+            </p>
+            <a
+              href={instagram}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram da Lúmine"
+            >
               <img
-                src={Instagram} alt="Instagram" className="instagram__image" />
+                src={Instagram} alt="" className="instagram__image" />
             </a>
 
-            <a href={whatsapp} target="_blank" rel="noreferrer">
-              <img src={Whatsapp} alt="Whatsapp" className="whatsapp__image" />
+            <a
+              href={whatsapp}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="WhatsApp da Lúmine"
+            >
+              <img src={Whatsapp} alt="" className="whatsapp__image" />
             </a>
           </div>
         </div>

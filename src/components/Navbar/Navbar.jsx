@@ -39,6 +39,7 @@ function Navbar() {
           <a href="#servicos">Serviços</a>
           <a href="#processo">Processo</a>
           <a href="#sobre">Sobre</a>
+          <a href="#faq">FAQ</a>
           <a href="#contato">Contato</a>
         </div>
 
@@ -75,6 +76,10 @@ function Navbar() {
 
             <a href="#sobre" onClick={closeMenu}>
               Sobre
+            </a>
+
+            <a href="#faq" onClick={closeMenu}>
+              FAQ
             </a>
 
             <a href="#contato" onClick={closeMenu}>

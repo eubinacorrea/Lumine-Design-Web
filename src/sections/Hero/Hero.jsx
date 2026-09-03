@@ -2,9 +2,9 @@ import "./Hero.css";
 import Container from "../../components/Container/Container";
 import Button from "../../components/Button/Button";
 
-function Hero({ title, text, buttonText, img }) {
+function Hero({ title, text, buttonText, buttonHref, img }) {
   return (
-    <section className="hero">
+    <section className="hero" id="inicio">
       <Container>
         <div className="hero__content">
           <div className="hero__left">
@@ -17,7 +17,7 @@ function Hero({ title, text, buttonText, img }) {
           </div>
 
           <div className="hero__cta">
-            <Button variant="primary" size="large">
+            <Button as="a" href={buttonHref}>
               {buttonText}
             </Button>
           </div>

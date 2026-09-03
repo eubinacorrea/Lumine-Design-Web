@@ -2,10 +2,10 @@ import "./Contact.css";
 
 import Container from "../../components/Container/Container";
 import Button from "../../components/Button/Button";
-import Instagram from "../../assets/icons/Instagram.png"
-import Whatsapp from "../../assets/icons/Whatsapp.png"
-import Envelope from "../../assets/icons/envelope.png"
-import Relogio from "../../assets/icons/relogio.png"
+import Instagram from "../../assets/icons/Instagram.png";
+import Whatsapp from "../../assets/icons/Whatsapp.png";
+import Envelope from "../../assets/icons/envelope.png";
+import Relogio from "../../assets/icons/relogio.png";
 import ContactForm from "./ContactForm";
 
 function Contact({
@@ -38,25 +38,35 @@ function Contact({
           <div className="contact__actions">
             
             <Button
-              as="a" href={whatsapp} target="_blank" rel="noreferrer" className="contact__cta" >
-              <img src={Whatsapp} alt="Whatsapp" className="whatsapp__image" />
+              as="a"
+              href={whatsapp}
+              target="_blank"
+              rel="noreferrer"
+              className="contact__cta"
+            >
+              <img src={Whatsapp} alt="" className="whatsapp__image" />
               +55 47 99741-7709
             </Button>
 
             <Button
-              as="a" href={instagram} target="_blank" rel="noreferrer" className="contact__cta">
-              <img src={Instagram} alt="Instagram" className="instagram__image"/> 
-               @luminedesigncode
+              as="a"
+              href={instagram}
+              target="_blank"
+              rel="noreferrer"
+              className="contact__cta"
+            >
+              <img src={Instagram} alt="" className="instagram__image" />
+              @luminedesigncode
             </Button>
 
-            <Button as="a" href={email} target="_blank" rel="noreferrer" className="contact__cta">
-              <img src={Envelope} alt="Email" className="email__image"/>
+            <Button as="a" href={`mailto:${email}`} className="contact__cta">
+              <img src={Envelope} alt="" className="email__image" />
               contato@lumine.art.br
             </Button>
 
             <div className="atendimento">
-            <img src={Relogio} alt="Relogio" className="relogio__image" />
-            {relogio}
+              <img src={Relogio} alt="" className="relogio__image" />
+              {relogio}
             </div>
           </div>
           
