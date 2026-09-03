@@ -1,8 +1,8 @@
 .contact {
-  padding: 120px 0;
+  padding: clamp(96px, 8vw, 144px) 0;
   background:
-    radial-gradient(circle at 18% 15%, rgba(211, 154, 114, 0.16), transparent 24rem),
-    radial-gradient(circle at 85% 65%, rgba(179, 52, 103, 0.28), transparent 30rem),
+    radial-gradient(circle at 18% 15%, rgba(239, 187, 143, 0.28), transparent 27rem),
+    radial-gradient(circle at 85% 65%, rgba(218, 67, 126, 0.43), transparent 34rem),
     linear-gradient(135deg, #280817 0%, #620025 48%, #260812 100%);
   color: var(--color-text-light);
   border-top: 1px solid rgba(244, 238, 232, 0.16);
@@ -48,7 +48,7 @@
 .contact__title {
   max-width: 850px;
   margin: 0 0 28px;
-  font-size: clamp(3rem, 5vw, 6rem);
+  font-size: clamp(3.25rem, 5.2vw, 6.25rem);
   line-height: 1;
   letter-spacing: -0.04em;
   
@@ -72,6 +72,8 @@
   background: rgba(244, 238, 232, 0.09);
   border: 1px solid rgba(244, 238, 232, 0.22);
   backdrop-filter: blur(12px);
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
 
 .contact__actions .button:hover {
@@ -100,7 +102,7 @@
   
 }
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
   .contact {
     padding: 90px 0;
   }
@@ -113,5 +115,22 @@
   .contact__form-section {
     margin-top: 64px;
     padding-top: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact__title {
+    font-size: clamp(2.5rem, 12vw, 3.4rem);
+  }
+
+  .contact__actions {
+    gap: 20px;
+  }
+
+  .contact__actions .button {
+    width: 100%;
+    justify-content: flex-start;
+    padding-inline: 20px;
+    font-size: 1rem;
   }
 }

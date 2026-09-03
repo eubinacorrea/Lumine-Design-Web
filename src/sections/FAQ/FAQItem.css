@@ -27,9 +27,19 @@
 }
 
 .faq-item__question {
-  font-size: 1.4rem;
+  font-size: clamp(1.15rem, 1.35vw, 1.45rem);
   line-height: 1.2;
   font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .faq-item {
+    padding: 24px 0;
+  }
+
+  .faq-item__trigger {
+    gap: 16px;
+  }
 }
 
 .faq-item__icon {

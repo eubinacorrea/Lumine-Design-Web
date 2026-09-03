@@ -1,7 +1,7 @@
 .section-title {
   display: grid;
-  grid-template-columns: 0.35fr 1fr;
-  gap: 32px 64px;
+  grid-template-columns: minmax(150px, 0.3fr) minmax(0, 1fr);
+  gap: 28px clamp(40px, 5vw, 80px);
 }
 
 .section-title__eyebrow {
@@ -19,8 +19,8 @@
   max-width: 900px;
   margin: 0;
 
-  font-size: clamp(2.5rem, 4.5vw, 5rem);
-  line-height: 1.05;
+  font-size: clamp(2.75rem, 4.2vw, 5.25rem);
+  line-height: 1.02;
   letter-spacing: -0.04em;
 }
 
@@ -31,7 +31,8 @@
   margin: 0;
 
   color: var(--color-text-muted-dark);
-  line-height: 1.6;
+  font-size: clamp(1rem, 1.05vw, 1.15rem);
+  line-height: 1.65;
 }
 
 /* Para seções de FUNDO CLARO */
@@ -52,13 +53,19 @@
   color: var(--color-text-muted-light);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 760px) {
   .section-title {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 20px;
   }
 
   .section-title__description {
     grid-column: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title__heading {
+    font-size: clamp(2.25rem, 11vw, 3.25rem);
   }
 }
