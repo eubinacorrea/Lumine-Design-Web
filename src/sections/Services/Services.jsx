@@ -7,6 +7,8 @@ function Services({
   eyebrow,
   title,
   description,
+  concept,
+  media,
   children,
 }) {
   return (
@@ -18,6 +20,11 @@ function Services({
           title={title}
           description={description}
         />
+
+        <div className="services__story">
+          <p className="services__concept">{concept}</p>
+          <div className="services__media">{media}</div>
+        </div>
 
         <div className="services__grid">
           {children}

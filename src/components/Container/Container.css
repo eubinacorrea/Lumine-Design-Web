@@ -1,9 +1,16 @@
 .container {
-  width: min(
-    calc(100% - 64px),
-    var(--container)
-  );
-
+  width: min(calc(100% - 64px), var(--container));
   margin-inline: auto;
-  padding-inline: 24px;
+}
+
+@media (max-width: 760px) {
+  .container {
+    width: calc(100% - 40px);
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    width: calc(100% - 32px);
+  }
 }

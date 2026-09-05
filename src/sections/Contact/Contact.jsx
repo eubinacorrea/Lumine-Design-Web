@@ -75,7 +75,7 @@ function Contact({
 
         <div className="contact__form-section">
           <p className="contact__form-eyebrow">
-            Ou escreva pra gente
+            Ou envie uma mensagem
           </p>
 
           <ContactForm />

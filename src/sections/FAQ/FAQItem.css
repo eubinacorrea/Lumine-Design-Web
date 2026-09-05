@@ -1,10 +1,10 @@
 .faq-item {
   padding: 28px 0;
-  border-top: 1px solid rgba(5, 5, 5, 0.18);
+  border-top: 1px solid var(--color-border);
 }
 
 .faq-item:last-child {
-  border-bottom: 1px solid rgba(5, 5, 5, 0.18);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .faq-item__heading {
@@ -27,9 +27,19 @@
 }
 
 .faq-item__question {
-  font-size: 1.4rem;
+  font-size: clamp(1.15rem, 1.35vw, 1.45rem);
   line-height: 1.2;
   font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .faq-item {
+    padding: 24px 0;
+  }
+
+  .faq-item__trigger {
+    gap: 16px;
+  }
 }
 
 .faq-item__icon {
@@ -40,7 +50,7 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  border: 1px solid rgba(5, 5, 5, 0.18);
+  border: 1px solid var(--color-border);
   font-size: 1.4rem;
   line-height: 1;
   transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
@@ -48,9 +58,9 @@
 
 .faq-item--open .faq-item__icon {
   transform: rotate(180deg);
-  background: var(--wine, #810027);
-  border-color: var(--wine, #810027);
-  color: #fff;
+  background: linear-gradient(135deg, var(--color-brand-bright), var(--color-brand));
+  border-color: transparent;
+  color: var(--color-text-light);
 }
 
 /* Expansão via grid-template-rows: 0fr -> 1fr, sem JS medindo altura. */
@@ -73,7 +83,7 @@
   margin: 0;
   padding-top: 14px;
 
-  color: #555;
+  color: var(--color-text-muted-light);
   line-height: 1.6;
 }
 
