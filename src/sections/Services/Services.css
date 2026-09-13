@@ -51,6 +51,28 @@
   text-wrap: balance;
 }
 
+@supports (animation-timeline: view()) {
+  .services__concept {
+    animation: services-concept-reveal linear both;
+    animation-timeline: view(block);
+    animation-range: entry 0% cover 42%;
+  }
+}
+
+@keyframes services-concept-reveal {
+  from {
+    filter: blur(0.45rem);
+    opacity: 0.18;
+    transform: translateY(1.75rem) scale(0.96);
+  }
+
+  to {
+    filter: blur(0);
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .services__media {
   min-width: 0;
 }
@@ -95,5 +117,14 @@
     gap: 20px;
 
     margin-top: 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .services__concept {
+    animation: none;
+    filter: none;
+    opacity: 1;
+    transform: none;
   }
 }

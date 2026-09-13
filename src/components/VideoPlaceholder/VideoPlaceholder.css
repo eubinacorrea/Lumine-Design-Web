@@ -16,6 +16,8 @@
     inset 0 1px 0 rgba(244, 238, 232, 0.12),
     0 30px 90px rgba(0, 0, 0, 0.36),
     0 0 80px rgba(179, 52, 103, 0.12);
+
+  transform-origin: 50% 50%;
 }
 
 .video-placeholder::before {
@@ -130,6 +132,91 @@
   }
 }
 
+/*
+ * Adaptação do zoom-scroll para a narrativa da Lúmine.
+ * O elemento continua no fluxo normal da página: o scroll controla apenas
+ * foco, escala e luz, sem prender a navegação em telas inteiras.
+ */
+@supports (animation-timeline: view()) {
+  .scroll-zoom-media {
+    animation: video-scroll-zoom linear both;
+    animation-timeline: view(block);
+    animation-range: entry 0% exit 100%;
+    will-change: transform, filter, opacity;
+  }
+
+  .problem .scroll-zoom-media {
+    animation-name: video-scroll-zoom-hidden;
+  }
+
+  .services .scroll-zoom-media {
+    animation-name: video-scroll-zoom-reveal;
+  }
+}
+
+@keyframes video-scroll-zoom {
+  0% {
+    filter: blur(1rem);
+    opacity: 0.2;
+    transform: scale(0.76);
+  }
+
+  30%,
+  66% {
+    filter: blur(0);
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    filter: blur(0.45rem);
+    opacity: 0.25;
+    transform: scale(1.16);
+  }
+}
+
+@keyframes video-scroll-zoom-hidden {
+  0% {
+    filter: blur(1.4rem);
+    opacity: 0.12;
+    transform: scale(0.7);
+  }
+
+  34%,
+  68% {
+    filter: blur(0);
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    filter: blur(0.55rem);
+    opacity: 0.22;
+    transform: scale(1.13);
+  }
+}
+
+@keyframes video-scroll-zoom-reveal {
+  0% {
+    filter: blur(1.1rem) saturate(0.72);
+    opacity: 0.16;
+    transform: scale(0.74);
+  }
+
+  32%,
+  65% {
+    filter: blur(0) saturate(1);
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    filter: blur(0.35rem) saturate(1.12);
+    opacity: 0.3;
+    transform: scale(1.2);
+  }
+}
+
 @media (max-width: 760px) {
   .video-placeholder {
     min-height: 280px;
@@ -158,8 +245,12 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .scroll-zoom-media,
   .video-placeholder::before,
   .video-placeholder__orb {
     animation: none;
+    filter: none;
+    opacity: 1;
+    transform: none;
   }
 }
