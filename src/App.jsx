@@ -2,6 +2,7 @@ import Hero from "./sections/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
 import Problem from "./sections/Problem/Problem";
 import VideoPlaceholder from "./components/VideoPlaceholder/VideoPlaceholder";
+import ScrollScenes from "./components/ScrollScenes";
 import ServiceCard from "./sections/Services/ServiceCard";
 import Services from "./sections/Services/Services";
 import Process from "./sections/Process/Process";
@@ -104,31 +105,33 @@ function App() {
       <Navbar />
 
       <main>
-        <Hero
-          title="O valor do seu negócio precisa ser visto."
-          text="A Lúmine organiza sua marca, sua comunicação e sua presença digital para que mais pessoas entendam o que sua empresa oferece e por que escolhê-la."
-          buttonText="Vamos iluminar esse caminho"
-          buttonHref="#contato"
-          visual={
-            <VideoPlaceholder
-              variant="portrait"
-              label="A luz encontra o negócio"
-              description="Movimento principal da Hero: presença, descoberta e transformação."
-            />
-          }
-        />
+        <ScrollScenes>
+          <Hero
+            title="O valor do seu negócio precisa ser visto."
+            text="A Lúmine organiza sua marca, sua comunicação e sua presença digital para que mais pessoas entendam o que sua empresa oferece e por que escolhê-la."
+            buttonText="Vamos iluminar esse caminho"
+            buttonHref="#contato"
+            visual={
+              <VideoPlaceholder
+                variant="portrait"
+                label="A luz encontra o negócio"
+                description="Movimento principal da Hero: presença, descoberta e transformação."
+              />
+            }
+          />
 
-        <Problem
-          text="O que pode estar acontecendo"
-          title="Quando falta clareza, boas empresas passam despercebidas."
-          problemText="Se a marca não mostra o que torna o negócio diferente, as pessoas podem não entender seu valor — mesmo quando o produto ou serviço é excelente."
-          media={
-            <VideoPlaceholder
-              label="O valor que ainda não aparece"
-              description="Vídeo de reconhecimento do problema: algo bom que permanece fora do campo de visão."
-            />
-          }
-        />
+          <Problem
+            text="O que pode estar acontecendo"
+            title="Quando falta clareza, boas empresas passam despercebidas."
+            problemText="Se a marca não mostra o que torna o negócio diferente, as pessoas podem não entender seu valor — mesmo quando o produto ou serviço é excelente."
+            media={
+              <VideoPlaceholder
+                label="O valor que ainda não aparece"
+                description="Vídeo de reconhecimento do problema: algo bom que permanece fora do campo de visão."
+              />
+            }
+          />
+        </ScrollScenes>
         <Services
           eyebrow="Como ajudamos"
           title="Tornamos mais claro o que sua empresa tem de melhor."

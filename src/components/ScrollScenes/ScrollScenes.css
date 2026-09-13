@@ -1,0 +1,77 @@
+.scroll-scenes,
+.scroll-scenes__viewport,
+.scroll-scenes__scene {
+  position: relative;
+}
+
+@media (min-width: 901px) and (min-height: 650px) {
+  .scroll-scenes {
+    height: calc(var(--scene-count) * 100dvh);
+  }
+
+  .scroll-scenes__viewport {
+    position: sticky;
+    top: 0;
+    height: 100dvh;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  .scroll-scenes__scene {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    filter: blur(var(--scene-blur, 0));
+    opacity: var(--scene-opacity, 0);
+    pointer-events: none;
+    transform: scale(var(--scene-scale, 0.68));
+    transform-origin: center;
+    will-change: transform, filter, opacity;
+  }
+
+  .scroll-scenes__scene:first-child {
+    --scene-opacity: 1;
+    --scene-scale: 1;
+  }
+
+  .scroll-scenes__scene[data-active] {
+    z-index: 1;
+    pointer-events: auto;
+  }
+
+  .scroll-scenes__scene > section {
+    width: 100%;
+    height: 100dvh;
+    min-height: 0;
+  }
+
+  .scroll-scenes .hero {
+    padding-top: clamp(112px, 12vh, 150px);
+    padding-bottom: clamp(44px, 7vh, 80px);
+  }
+
+  .scroll-scenes .problem {
+    display: flex;
+    align-items: center;
+    padding-block: clamp(88px, 10vh, 132px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-scenes {
+    height: auto;
+  }
+
+  .scroll-scenes__viewport,
+  .scroll-scenes__scene {
+    position: relative;
+    inset: auto;
+    height: auto;
+    overflow: visible;
+    filter: none;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+  }
+}

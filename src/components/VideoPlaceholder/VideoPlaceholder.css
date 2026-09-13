@@ -132,17 +132,6 @@
   }
 }
 
-/* O JavaScript fornece um progresso contínuo e independente do suporte a
- * scroll-driven animations do navegador. */
-.scroll-zoom-media {
-  filter:
-    blur(var(--scroll-blur, 0))
-    saturate(var(--scroll-saturation, 1));
-  opacity: var(--scroll-opacity, 1);
-  transform: scale(var(--scroll-scale, 1));
-  will-change: transform, filter, opacity;
-}
-
 @media (max-width: 760px) {
   .video-placeholder {
     min-height: 280px;
@@ -171,12 +160,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .scroll-zoom-media,
   .video-placeholder::before,
   .video-placeholder__orb {
     animation: none;
-    filter: none;
-    opacity: 1;
-    transform: none;
   }
 }
