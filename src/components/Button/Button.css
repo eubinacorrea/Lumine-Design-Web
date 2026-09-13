@@ -5,7 +5,7 @@
   padding: 14px 28px;
   border: none;
   border-radius: 999px;
-  background-color: var(--color-brand);
+  background: linear-gradient(135deg, var(--color-brand-bright), var(--color-brand));
   color: var(--color-text);
   font-size: 1rem;
   font-weight: 700;
@@ -14,7 +14,7 @@
   width: fit-content;
   
   transition:
-    background-color 0.3s ease,
+    filter 0.3s ease,
     transform 0.3s ease,
     box-shadow 0.3s ease;
     min-height: 54px;
@@ -22,8 +22,9 @@
 }
 
 .button:hover {
-  background-color: var(--color-brand-hover);
+  filter: brightness(1.12);
   transform: translateY(-2px);
-  box-shadow: -1px -3px 8px #dfdbb8;
-  text-shadow: -1px -3px 8px #dfdbb8a3;
+  box-shadow:
+    0 12px 32px rgba(114, 0, 44, 0.4),
+    0 0 24px rgba(211, 154, 114, 0.12);
 }

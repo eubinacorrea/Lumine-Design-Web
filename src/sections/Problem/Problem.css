@@ -1,9 +1,12 @@
 .problem {
-  padding-block: 120px;
+  padding-block: clamp(96px, 8vw, 144px);
 
-  background: var(--color-background, #cc3636);
+  background:
+    radial-gradient(circle at 8% 55%, rgba(179, 52, 103, 0.3), transparent 31rem),
+    radial-gradient(circle at 82% 90%, rgba(211, 154, 114, 0.1), transparent 22rem),
+    linear-gradient(180deg, #100a0e, #120c10);
 
-  color: #fff;
+  color: var(--color-text-light);
 }
 
 .problem__content {
@@ -21,7 +24,7 @@
 .problem__eyebrow {
   margin: 0;
 
-  color: var(--color-brand);
+  color: var(--color-glow-warm);
 
   font-size: 0.85rem;
   font-weight: 700;
@@ -35,11 +38,17 @@
 
   margin: 0;
 
-  font-size: clamp(2.5rem, 5vw, 5.5rem);
+  font-size: clamp(2.8rem, 5vw, 5.75rem);
   font-weight: 700;
 
   line-height: 1.02;
   letter-spacing: -0.045em;
+}
+
+@media (max-width: 480px) {
+  .problem__title {
+    font-size: clamp(2.35rem, 11vw, 3.2rem);
+  }
 }
 
 .problem__text {
@@ -49,7 +58,7 @@
 
   margin: 24px 0 0;
 
-  color: #c8c8c8;
+  color: var(--color-text-muted-light);
 
   font-size: clamp(1rem, 1.3vw, 1.25rem);
 

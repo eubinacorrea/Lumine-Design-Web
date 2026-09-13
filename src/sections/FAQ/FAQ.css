@@ -1,11 +1,14 @@
 .faq {
-  padding: 120px 0;
-  background: var(--color-background);
-  color: #050505;
+  padding: clamp(96px, 8vw, 144px) 0;
+  background:
+    radial-gradient(circle at 92% 45%, rgba(202, 56, 113, 0.31), transparent 31rem),
+    radial-gradient(circle at 8% 90%, rgba(211, 154, 114, 0.1), transparent 23rem),
+    linear-gradient(180deg, #0c090b, #120b0f);
+  color: var(--color-text-light);
 }
 
 .faq__list {
-  margin-top: 72px;
+  margin-top: clamp(48px, 5vw, 80px);
 }
 
 @media (max-width: 600px) {
