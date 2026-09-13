@@ -2,7 +2,7 @@ import "./Hero.css";
 import Container from "../../components/Container/Container";
 import Button from "../../components/Button/Button";
 
-function Hero({ title, text, buttonText, buttonHref, img }) {
+function Hero({ title, text, buttonText, buttonHref, visual }) {
   return (
     <section className="hero" id="inicio">
       <Container>
@@ -13,7 +13,7 @@ function Hero({ title, text, buttonText, buttonHref, img }) {
           </div>
 
           <div className="hero__image-container">
-            {img}
+            {visual}
           </div>
 
           <div className="hero__cta">
