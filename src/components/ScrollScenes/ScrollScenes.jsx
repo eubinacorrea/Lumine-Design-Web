@@ -10,9 +10,6 @@ function ScrollScenes({ children }) {
     const sceneElements = Array.from(
       root.querySelectorAll(":scope > .scroll-scenes__viewport > .scroll-scenes__scene"),
     );
-    const desktopLayout = window.matchMedia(
-      "(min-width: 901px) and (min-height: 650px)",
-    );
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     let animationFrame = null;
 
@@ -23,13 +20,14 @@ function ScrollScenes({ children }) {
         scene.style.removeProperty("--scene-blur");
         scene.removeAttribute("data-active");
         scene.removeAttribute("aria-hidden");
+        scene.inert = false;
       });
     };
 
     const updateScenes = () => {
       animationFrame = null;
 
-      if (!desktopLayout.matches || reducedMotion.matches) {
+      if (reducedMotion.matches) {
         resetScenes();
         return;
       }
@@ -56,6 +54,7 @@ function ScrollScenes({ children }) {
         scene.style.setProperty("--scene-blur", `${blur.toFixed(2)}px`);
         scene.toggleAttribute("data-active", isActive);
         scene.setAttribute("aria-hidden", String(!isActive));
+        scene.inert = !isActive;
       });
     };
 
@@ -66,7 +65,7 @@ function ScrollScenes({ children }) {
     };
 
     const handleSceneLink = (event) => {
-      if (!desktopLayout.matches || reducedMotion.matches) return;
+      if (reducedMotion.matches) return;
 
       const link = event.currentTarget;
       const sceneIndex = sceneElements.findIndex(
@@ -77,8 +76,13 @@ function ScrollScenes({ children }) {
 
       event.preventDefault();
       const rootTop = window.scrollY + root.getBoundingClientRect().top;
+      const scrollDistance = Math.max(1, root.offsetHeight - window.innerHeight);
+      const sceneOffset =
+        sceneElements.length > 1
+          ? (sceneIndex / (sceneElements.length - 1)) * scrollDistance
+          : 0;
       window.scrollTo({
-        top: rootTop + sceneIndex * window.innerHeight,
+        top: rootTop + sceneOffset,
         behavior: "smooth",
       });
     };
@@ -93,7 +97,6 @@ function ScrollScenes({ children }) {
     sceneLinks.forEach((link) => link.addEventListener("click", handleSceneLink));
     window.addEventListener("scroll", requestUpdate, { passive: true });
     window.addEventListener("resize", requestUpdate);
-    desktopLayout.addEventListener("change", requestUpdate);
     reducedMotion.addEventListener("change", requestUpdate);
     requestUpdate();
 
@@ -103,7 +106,6 @@ function ScrollScenes({ children }) {
       );
       window.removeEventListener("scroll", requestUpdate);
       window.removeEventListener("resize", requestUpdate);
-      desktopLayout.removeEventListener("change", requestUpdate);
       reducedMotion.removeEventListener("change", requestUpdate);
 
       if (animationFrame !== null) {
@@ -116,7 +118,10 @@ function ScrollScenes({ children }) {
     <div
       ref={rootRef}
       className="scroll-scenes"
-      style={{ "--scene-count": scenes.length }}
+      style={{
+        "--scene-count": scenes.length,
+        "--scene-scroll-height": `calc(100dvh + ${(scenes.length - 1) * 72}dvh)`,
+      }}
     >
       <div className="scroll-scenes__viewport">
         {scenes.map((scene, index) => (

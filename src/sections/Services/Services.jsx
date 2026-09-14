@@ -10,25 +10,34 @@ function Services({
   concept,
   media,
   children,
+  part = "all",
 }) {
+  const showIntro = part !== "list";
+  const showList = part !== "intro";
+
   return (
-    <section className="services" id="servicos">
+    <section
+      className={`services services--${part}`}
+      id={showIntro ? "servicos" : undefined}
+    >
       <Container>
-        <SectionTitle
-          variant="light"
-          eyebrow={eyebrow}
-          title={title}
-          description={description}
-        />
+        {showIntro && (
+          <>
+            <SectionTitle
+              variant="light"
+              eyebrow={eyebrow}
+              title={title}
+              description={description}
+            />
 
-        <div className="services__story">
-          <p className="services__concept">{concept}</p>
-          <div className="services__media">{media}</div>
-        </div>
+            <div className="services__story">
+              <p className="services__concept">{concept}</p>
+              <div className="services__media">{media}</div>
+            </div>
+          </>
+        )}
 
-        <div className="services__grid">
-          {children}
-        </div>
+        {showList && <div className="services__grid">{children}</div>}
       </Container>
     </section>
   );

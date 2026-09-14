@@ -4,57 +4,134 @@
   position: relative;
 }
 
-@media (min-width: 901px) and (min-height: 650px) {
-  .scroll-scenes {
-    height: calc(var(--scene-count) * 100dvh);
+.scroll-scenes {
+  height: var(--scene-scroll-height);
+}
+
+.scroll-scenes__viewport {
+  position: sticky;
+  top: 0;
+  height: 100dvh;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.scroll-scenes__scene {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  filter: blur(var(--scene-blur, 0));
+  opacity: var(--scene-opacity, 0);
+  pointer-events: none;
+  transform: scale(var(--scene-scale, 0.68));
+  transform-origin: center;
+  will-change: transform, filter, opacity;
+}
+
+.scroll-scenes__scene:first-child {
+  --scene-opacity: 1;
+  --scene-scale: 1;
+}
+
+.scroll-scenes__scene[data-active] {
+  z-index: 1;
+  pointer-events: auto;
+}
+
+.scroll-scenes__scene > section,
+.scroll-scenes__scene > footer {
+  width: 100%;
+  height: 100dvh;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+.scroll-scenes .hero {
+  padding-top: clamp(96px, 12vh, 150px);
+  padding-bottom: clamp(32px, 6vh, 80px);
+}
+
+.scroll-scenes .problem,
+.scroll-scenes .services,
+.scroll-scenes .process,
+.scroll-scenes .about,
+.scroll-scenes .team,
+.scroll-scenes .faq,
+.scroll-scenes .contact {
+  display: flex;
+  align-items: center;
+  padding-block: clamp(76px, 9vh, 120px);
+}
+
+.scroll-scenes .footer {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .scroll-scenes .hero,
+  .scroll-scenes .problem,
+  .scroll-scenes .services,
+  .scroll-scenes .process,
+  .scroll-scenes .about,
+  .scroll-scenes .team,
+  .scroll-scenes .faq,
+  .scroll-scenes .contact {
+    padding-top: max(84px, calc(env(safe-area-inset-top) + 72px));
+    padding-bottom: max(28px, env(safe-area-inset-bottom));
   }
 
-  .scroll-scenes__viewport {
-    position: sticky;
-    top: 0;
-    height: 100dvh;
-    overflow: hidden;
-    isolation: isolate;
+  .scroll-scenes .section-title {
+    gap: 14px;
   }
 
-  .scroll-scenes__scene {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    overflow: hidden;
-    filter: blur(var(--scene-blur, 0));
-    opacity: var(--scene-opacity, 0);
-    pointer-events: none;
-    transform: scale(var(--scene-scale, 0.68));
-    transform-origin: center;
-    will-change: transform, filter, opacity;
+  .scroll-scenes .section-title__heading {
+    font-size: clamp(2rem, 9.5vw, 3.25rem);
   }
 
-  .scroll-scenes__scene:first-child {
-    --scene-opacity: 1;
-    --scene-scale: 1;
+  .scroll-scenes .section-title__description {
+    font-size: 0.95rem;
+    line-height: 1.5;
   }
 
-  .scroll-scenes__scene[data-active] {
-    z-index: 1;
-    pointer-events: auto;
+  .scroll-scenes .hero__content,
+  .scroll-scenes .problem__content {
+    gap: 18px;
   }
 
-  .scroll-scenes__scene > section {
-    width: 100%;
-    height: 100dvh;
-    min-height: 0;
+  .scroll-scenes .hero__title,
+  .scroll-scenes .problem__title {
+    margin-bottom: 14px;
+    font-size: clamp(2rem, 9.5vw, 3.15rem);
   }
 
-  .scroll-scenes .hero {
-    padding-top: clamp(112px, 12vh, 150px);
-    padding-bottom: clamp(44px, 7vh, 80px);
+  .scroll-scenes .hero__text,
+  .scroll-scenes .problem__text {
+    margin-top: 0;
+    font-size: 0.92rem;
+    line-height: 1.45;
   }
 
-  .scroll-scenes .problem {
-    display: flex;
-    align-items: center;
-    padding-block: clamp(88px, 10vh, 132px);
+  .scroll-scenes .hero .video-placeholder,
+  .scroll-scenes .problem .video-placeholder {
+    min-height: 180px;
+    height: 29dvh;
+    aspect-ratio: auto;
+  }
+
+  .scroll-scenes .hero__cta {
+    margin-top: 0;
+  }
+
+  .scroll-scenes .faq__list {
+    margin-top: 26px;
+  }
+
+  .scroll-scenes .faq-item {
+    padding-block: 18px;
   }
 }
 
