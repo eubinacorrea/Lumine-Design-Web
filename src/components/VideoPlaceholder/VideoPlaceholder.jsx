@@ -3,7 +3,7 @@ import "./VideoPlaceholder.css";
 function VideoPlaceholder({ label, description, variant = "landscape" }) {
   return (
     <div
-      className={`video-placeholder video-placeholder--${variant} scroll-zoom-media`}
+      className={`video-placeholder video-placeholder--${variant}`}
       role="img"
       aria-label={`Espaço reservado para vídeo: ${label}`}
     >

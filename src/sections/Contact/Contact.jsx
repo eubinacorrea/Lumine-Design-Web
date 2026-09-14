@@ -14,12 +14,20 @@ function Contact({
   whatsapp,
   instagram,
   email,
-  relogio
+  relogio,
+  part = "all",
 }) {
+  const showIntro = part !== "form";
+  const showForm = part !== "intro";
+
   return (
-    <section className="contact" id="contato">
+    <section
+      className={`contact contact--${part}`}
+      id={showIntro ? "contato" : undefined}
+    >
       <Container>
-        <div className="contact__content">
+        {showIntro && (
+          <div className="contact__content">
 
           <div>
             <p className="contact__eyebrow">
@@ -71,15 +79,18 @@ function Contact({
           </div>
           
 
-        </div>
+          </div>
+        )}
 
-        <div className="contact__form-section">
-          <p className="contact__form-eyebrow">
-            Ou envie uma mensagem
-          </p>
+        {showForm && (
+          <div className="contact__form-section">
+            <p className="contact__form-eyebrow">
+              Ou envie uma mensagem
+            </p>
 
-          <ContactForm />
-        </div>
+            <ContactForm />
+          </div>
+        )}
       </Container>
     </section>
   );

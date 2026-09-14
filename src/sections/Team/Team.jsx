@@ -9,19 +9,26 @@ function Team({
   title,
   description,
   children,
+  part = "all",
 }) {
-  return (
-    <section className="team">
-      <Container>
-        <SectionTitle
-          eyebrow={eyebrow}
-          title={title}
-          description={description}
-        />
+  const showIntro = part !== "list";
+  const showList = part !== "intro";
 
-        <div className="team__grid">
-          {children}
-        </div>
+  return (
+    <section
+      className={`team team--${part}`}
+      id={showIntro ? "equipe" : undefined}
+    >
+      <Container>
+        {showIntro && (
+          <SectionTitle
+            eyebrow={eyebrow}
+            title={title}
+            description={description}
+          />
+        )}
+
+        {showList && <div className="team__grid">{children}</div>}
       </Container>
     </section>
   );

@@ -2,6 +2,7 @@ import Hero from "./sections/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
 import Problem from "./sections/Problem/Problem";
 import VideoPlaceholder from "./components/VideoPlaceholder/VideoPlaceholder";
+import ScrollScenes from "./components/ScrollScenes";
 import ServiceCard from "./sections/Services/ServiceCard";
 import Services from "./sections/Services/Services";
 import Process from "./sections/Process/Process";
@@ -104,121 +105,145 @@ function App() {
       <Navbar />
 
       <main>
-        <Hero
-          title="O valor do seu negócio precisa ser visto."
-          text="A Lúmine organiza sua marca, sua comunicação e sua presença digital para que mais pessoas entendam o que sua empresa oferece e por que escolhê-la."
-          buttonText="Vamos iluminar esse caminho"
-          buttonHref="#contato"
-          visual={
-            <VideoPlaceholder
-              variant="portrait"
-              label="A luz encontra o negócio"
-              description="Movimento principal da Hero: presença, descoberta e transformação."
+        <ScrollScenes>
+          <Hero
+            title="O valor do seu negócio precisa ser visto."
+            text="A Lúmine organiza sua marca, sua comunicação e sua presença digital para que mais pessoas entendam o que sua empresa oferece e por que escolhê-la."
+            buttonText="Vamos iluminar esse caminho"
+            buttonHref="#contato"
+            visual={
+              <VideoPlaceholder
+                variant="portrait"
+                label="A luz encontra o negócio"
+                description="Movimento principal da Hero: presença, descoberta e transformação."
+              />
+            }
+          />
+
+          <Problem
+            text="O que pode estar acontecendo"
+            title="Quando falta clareza, boas empresas passam despercebidas."
+            problemText="Se a marca não mostra o que torna o negócio diferente, as pessoas podem não entender seu valor — mesmo quando o produto ou serviço é excelente."
+            media={
+              <VideoPlaceholder
+                label="O valor que ainda não aparece"
+                description="Vídeo de reconhecimento do problema: algo bom que permanece fora do campo de visão."
+              />
+            }
+          />
+
+          <Services
+            part="intro"
+            eyebrow="Como ajudamos"
+            title="Tornamos mais claro o que sua empresa tem de melhor."
+            description="Da marca ao site, organizamos cada ponto de contato para que seu negócio seja compreendido, encontrado e lembrado."
+            concept="Clareza para comunicar. Presença para ser encontrado. Experiência para aproximar."
+            media={
+              <VideoPlaceholder
+                label="Da clareza à evolução"
+                description="Vídeo de solução: a luz ganha direção, revela caminhos e cria movimento."
+              />
+            }
+          />
+
+          <Services part="list">
+            {services.map((service) => (
+              <ServiceCard
+                key={service.id}
+                title={service.title}
+                description={service.description}
+              />
+            ))}
+          </Services>
+
+          <Process
+            part="intro"
+            eyebrow="Como trabalhamos"
+            title="Um processo simples, feito em conjunto."
+            description="Você acompanha cada etapa e entende o que está sendo feito, por que e qual será o próximo passo."
+          />
+
+          <Process part="list">
+            {processSteps.map((step) => (
+              <ProcessStep
+                key={step.id}
+                number={step.number}
+                title={step.title}
+                description={step.description}
+              />
+            ))}
+          </Process>
+
+          <About
+            eyebrow="Sobre a Lúmine"
+            title="Design e tecnologia com o mesmo objetivo: ajudar seu negócio."
+            description="A Lúmine nasceu da parceria entre duas áreas que funcionam melhor quando trabalham juntas."
+            text="Pensamos na marca, na comunicação e na experiência, mas também em como cada solução funcionará no dia a dia."
+            highlight="Assim, cada projeto fica mais claro, coerente e adequado à realidade da empresa."
+          />
+
+          <Team
+            part="intro"
+            eyebrow="Quem está por trás"
+            title="Duas especialidades, trabalhando lado a lado."
+            description="Raoni e Sabrina acompanham cada projeto de perto, do planejamento à entrega."
+          />
+
+          <Team part="list">
+            <TeamMember
+              image={
+                <img src={Raoni} alt="Raoni" className="team-member__image" />
+              }
+              name="Raoni Roehe"
+              role="Design e Branding"
+              description="Cuida da estratégia de marca, da identidade visual e da direção criativa dos projetos."
             />
-          }
-        />
 
-        <Problem
-          text="O que pode estar acontecendo"
-          title="Quando falta clareza, boas empresas passam despercebidas."
-          problemText="Se a marca não mostra o que torna o negócio diferente, as pessoas podem não entender seu valor — mesmo quando o produto ou serviço é excelente."
-          media={
-            <VideoPlaceholder
-              label="O valor que ainda não aparece"
-              description="Vídeo de reconhecimento do problema: algo bom que permanece fora do campo de visão."
+            <TeamMember
+              image={
+                <img
+                  src={Sabrina}
+                  alt="Sabrina"
+                  className="team-member__image"
+                />
+              }
+              name="Sabrina"
+              role="Desenvolvimento Web"
+              description="Cuida do desenvolvimento e transforma as decisões do projeto em experiências digitais que funcionam bem em diferentes telas."
             />
-          }
-        />
-        <Services
-          eyebrow="Como ajudamos"
-          title="Tornamos mais claro o que sua empresa tem de melhor."
-          description="Da marca ao site, organizamos cada ponto de contato para que seu negócio seja compreendido, encontrado e lembrado."
-          concept="Clareza para comunicar. Presença para ser encontrado. Experiência para aproximar."
-          media={
-            <VideoPlaceholder
-              label="Da clareza à evolução"
-              description="Vídeo de solução: a luz ganha direção, revela caminhos e cria movimento."
-            />
-          }
-        >
-          {services.map((service) => (
-            <ServiceCard
-              key={service.id}
-              title={service.title}
-              description={service.description}
-            />
-          ))}
-        </Services>
+          </Team>
 
-        <Process
-          eyebrow="Como trabalhamos"
-          title="Um processo simples, feito em conjunto."
-          description="Você acompanha cada etapa e entende o que está sendo feito, por que e qual será o próximo passo."
-        >
-          {processSteps.map((step) => (
-            <ProcessStep
-              key={step.id}
-              number={step.number}
-              title={step.title}
-              description={step.description}
-            />
-          ))}
-        </Process>
-        <About
-  eyebrow="Sobre a Lúmine"
-  title="Design e tecnologia com o mesmo objetivo: ajudar seu negócio."
-  description="A Lúmine nasceu da parceria entre duas áreas que funcionam melhor quando trabalham juntas."
-  text="Pensamos na marca, na comunicação e na experiência, mas também em como cada solução funcionará no dia a dia."
-  highlight="Assim, cada projeto fica mais claro, coerente e adequado à realidade da empresa."
-/>
+          <FAQ
+            eyebrow="Perguntas frequentes"
+            title="Algumas respostas para ajudar você a começar."
+            description="Se a sua dúvida não estiver aqui, entre em contato conosco."
+          >
+            {faqItems.map((item) => (
+              <FAQItem
+                key={item.id}
+                question={item.question}
+                answer={item.answer}
+              />
+            ))}
+          </FAQ>
 
-<Team
-  eyebrow="Quem está por trás"
-  title="Duas especialidades, trabalhando lado a lado."
-  description="Raoni e Sabrina acompanham cada projeto de perto, do planejamento à entrega."
->
-  <TeamMember
-    image={<img src={Raoni} alt="Raoni" className="team-member__image" />}
-    name="Raoni Roehe"
-    role="Design e Branding"
-    description="Cuida da estratégia de marca, da identidade visual e da direção criativa dos projetos."
-  />
+          <Contact
+            part="intro"
+            title="Vamos entender o que seu negócio precisa?"
+            description="Conte onde sua empresa está hoje e o que você gostaria de melhorar. Nós ajudamos a organizar os próximos passos."
+            relogio="Atendimento das 07:00 às 18:30 de segunda-feira a sexta-feira, das 09:00 às 14:00 aos sábados e fechado aos domingos."
+            whatsapp="https://wa.me/5547997417709"
+            instagram="https://instagram.com/luminedesigncode"
+            email="contato@lumine.art.br"
+          />
 
-  <TeamMember
-    image={<img src={Sabrina} alt="Sabrina" className="team-member__image" />}
-    name="Sabrina"
-    role="Desenvolvimento Web"
-    description="Cuida do desenvolvimento e transforma as decisões do projeto em experiências digitais que funcionam bem em diferentes telas."
-  />
-</Team>
-<FAQ
-  eyebrow="Perguntas frequentes"
-  title="Algumas respostas para ajudar você a começar."
-  description="Se a sua dúvida não estiver aqui, entre em contato conosco."
->
-  {faqItems.map((item) => (
-    <FAQItem
-      key={item.id}
-      question={item.question}
-      answer={item.answer}
-    />
-  ))}
-</FAQ>
+          <Contact part="form" />
 
-<Contact
-  title="Vamos entender o que seu negócio precisa?"
-  description="Conte onde sua empresa está hoje e o que você gostaria de melhorar. Nós ajudamos a organizar os próximos passos."
-  relogio="Atendimento das 07:00 às 18:30 de segunda-feira a sexta-feira, das 09:00 às 14:00 aos sábados e fechado aos domingos."
-  whatsapp="https://wa.me/5547997417709" 
-  instagram="https://instagram.com/luminedesigncode"
-  email="contato@lumine.art.br"
-    />
-  
-
-<Footer
-  instagram="https://instagram.com/luminedesigncode"
-  whatsapp="https://wa.me/5547997417709"
-  />
+          <Footer
+            instagram="https://instagram.com/luminedesigncode"
+            whatsapp="https://wa.me/5547997417709"
+          />
+        </ScrollScenes>
       </main>
     </>
   );
